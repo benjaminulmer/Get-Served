@@ -20,9 +20,27 @@ namespace horizontal
     /// </summary>
     public partial class MainWindow : Window
     {
+        Menu menu = new Menu();
+        Bill bill = new Bill();
+        Assistance assistance = new Assistance();
+        Order order = new Order();
+
         public MainWindow()
         {
             InitializeComponent();
+            mainStackPanel.Children.Add(menu);
+        }
+
+        private void menuButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainStackPanel.Children.Clear();
+            mainStackPanel.Children.Add(menu);
+        }
+
+        private void billButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainStackPanel.Children.Clear();
+            mainStackPanel.Children.Add(bill);
         }
     }
 }
