@@ -11,10 +11,10 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="mainStackPanel" HorizontalAlignment="Left" Height="601" Grid.Row="1" VerticalAlignment="Top" Width="998" Grid.Column="1" Margin="0,0,0,-199"/>
-        <Button x:Name="menuButton" Content="Menu" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="158" Click="menuButton_Click" Height="75" Margin="10,0,0,0" FontSize="24" Background="White"/>
-        <Button x:Name="billButton" Content="Bill" HorizontalAlignment="Left" Margin="10,80,0,0" Grid.Row="1" VerticalAlignment="Top" Width="158" RenderTransformOrigin="-0.392,0.05" Click="billButton_Click" Height="75" FontSize="24" Background="White"/>
-        <Button x:Name="assistanceButton" Content="Assistance" HorizontalAlignment="Left" Margin="10,160,0,0" Grid.Row="1" VerticalAlignment="Top" Width="158" Height="75" FontSize="24" Background="White" Click="assistanceButton_Click"/>
-        <Button x:Name="orderButton" Content="Place Order" HorizontalAlignment="Left" Margin="10,509,0,-182" Grid.Row="1" VerticalAlignment="Top" Width="158" Height="75" FontSize="24" Background="White" Click="orderButton_Click"/>
+        <StackPanel x:Name="mainStackPanel" HorizontalAlignment="Left" Height="594" Grid.Row="1" VerticalAlignment="Top" Width="1012" Grid.Column="1"/>
+        <Button x:Name="menuButton" Content="Menu" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="168" Click="menuButton_Click" Height="75" Margin="10,0,0,0" FontSize="24" Background="White"/>
+        <Button x:Name="billButton" Content="Bill" HorizontalAlignment="Left" Margin="10,80,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" RenderTransformOrigin="-0.392,0.05" Click="billButton_Click" Height="75" FontSize="24" Background="White"/>
+        <Button x:Name="assistanceButton" Content="Assistance" HorizontalAlignment="Left" Margin="10,160,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Height="75" FontSize="24" Background="White" Click="assistanceButton_Click"/>
+        <Button x:Name="orderButton" Content="Place Order" HorizontalAlignment="Left" Margin="10,509,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Height="75" FontSize="24" Background="White" Click="orderButton_Click"/>
     </Grid>
 </Window>

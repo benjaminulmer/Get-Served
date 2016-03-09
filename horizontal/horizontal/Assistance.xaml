@@ -4,9 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300" Width="1012" Height="594">
     <Grid>
-        <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-
+        <Button Content="Request Refills" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="985" Height="50" FontSize="24"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="985" Height="50"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="985" Height="50"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="985" Height="50"/>
     </Grid>
 </UserControl>
