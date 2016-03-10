@@ -8,5 +8,20 @@
         <Button x:Name="billButton" Content="Bill" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" RenderTransformOrigin="-0.392,0.05" Click="billButton_Click" Height="75" FontSize="24" Background="White" Canvas.Left="11" Canvas.Top="146"/>
         <Button x:Name="assistanceButton" Content="Assistance" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Height="75" FontSize="24" Background="White" Click="assistanceButton_Click" Canvas.Left="11" Canvas.Top="226"/>
         <Button x:Name="orderButton" Content="Place Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Height="76" FontSize="24" Background="White" Click="orderButton_Click" Canvas.Left="11" Canvas.Top="580"/>
+        <Label Content="Restaurant Name Goes Here" Canvas.Left="10" Width="581" FontSize="36"/>
+        <Label Content="Get Served Menu System" Canvas.Left="1006" Width="184" FontSize="14"/>
+        <Separator Height="50" Canvas.Left="-114" Margin="0" Canvas.Top="336" Width="586" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Border BorderBrush="Black" BorderThickness="1" Height="236" Canvas.Left="11" Canvas.Top="322" Width="163">
+            <TextBlock TextWrapping="Wrap" Text="Restaurant Custom Image/Logo/Advertisement/Promotion goes here" Margin="9" FontSize="14"/>
+        </Border>
     </Canvas>
 </Window>

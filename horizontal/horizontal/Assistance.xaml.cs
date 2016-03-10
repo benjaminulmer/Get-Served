@@ -36,7 +36,7 @@ namespace horizontal
             managerButton.Background = Brushes.White;
             customButton.Background = Brushes.White;
 
-            assistanceDialog.topLabel.Content = "Testing";
+            //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
         }
@@ -48,7 +48,7 @@ namespace horizontal
             managerButton.Background = Brushes.White;
             customButton.Background = Brushes.White;
 
-            assistanceDialog.topLabel.Content = "Testing";
+            //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
         }
@@ -60,7 +60,7 @@ namespace horizontal
             managerButton.Background = Brushes.LightGray;
             customButton.Background = Brushes.White;
 
-            assistanceDialog.topLabel.Content = "Testing";
+            //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
         }
@@ -72,7 +72,7 @@ namespace horizontal
             managerButton.Background = Brushes.White;
             customButton.Background = Brushes.LightGray;
 
-            assistanceDialog.topLabel.Content = "Testing";
+            //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
         }

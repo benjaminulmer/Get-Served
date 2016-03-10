@@ -4,10 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300" Width="1012" Height="594">
     <Canvas>
-		<Button x:Name="dinnerTab" Content="Dinner" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="31" Canvas.Top="10"/>
-		<Button x:Name="lunchTab" Content="Lunch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="111" Canvas.Top="10"/>
-
-	</Canvas>
+        <Button x:Name="dinnerTab" Content="Dinner" Width="150" Height="30" FontSize="18" Background="White" Click="dinnerTab_Click"/>
+        <Button x:Name="lunchTab" Content="Lunch" Width="150" Canvas.Left="150" Height="30" FontSize="18" Background="White" Click="lunchTab_Click"/>
+        <Button x:Name="kidsTab" Content="Kids" Canvas.Left="300" Width="150" Background="White" Height="30" FontSize="18" Click="kidsTab_Click"/>
+        <Button x:Name="dessertTab" Content="Dessert" Canvas.Left="450" Width="150" Height="30" FontSize="18" Background="White" Click="dessertTab_Click"/>
+        <Button x:Name="drinksTab" Content="Drinks" Canvas.Left="600" Width="150" Height="30" FontSize="18" Background="White" Click="drinksTab_Click"/>
+        <Separator Height="100" Margin="0" Canvas.Top="-21" Width="1012"/>
+    </Canvas>
 </UserControl>

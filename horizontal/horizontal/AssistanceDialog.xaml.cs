@@ -40,6 +40,12 @@ namespace horizontal
             resetParentButtonColors();
             cancelButton.Visibility = System.Windows.Visibility.Hidden;
             confirmButton.Visibility = System.Windows.Visibility.Hidden;
+
+            parent.refillButton.IsEnabled = false;
+            parent.serverButton.IsEnabled = false;
+            parent.managerButton.IsEnabled = false;
+            parent.customButton.IsEnabled = false;
+            topLabel.Content = "Assistance is on its way!";
         }
 
         private void resetParentButtonColors()
