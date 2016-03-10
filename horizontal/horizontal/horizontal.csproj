@@ -57,6 +57,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AssistanceDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Bill.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -71,6 +75,9 @@
     </Compile>
     <Compile Include="Assistance.xaml.cs">
       <DependentUpon>Assistance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssistanceDialog.xaml.cs">
+      <DependentUpon>AssistanceDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Bill.xaml.cs">
       <DependentUpon>Bill.xaml</DependentUpon>
