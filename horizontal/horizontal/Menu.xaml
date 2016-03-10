@@ -12,5 +12,8 @@
         <Button x:Name="dessertTab" Content="Dessert" Canvas.Left="450" Width="150" Height="30" FontSize="18" Background="White" Click="dessertTab_Click"/>
         <Button x:Name="drinksTab" Content="Drinks" Canvas.Left="600" Width="150" Height="30" FontSize="18" Background="White" Click="drinksTab_Click"/>
         <Separator Height="100" Margin="0" Canvas.Top="-21" Width="1012"/>
+        <ScrollViewer Height="562" Canvas.Top="30" Width="1002">
+            <StackPanel x:Name="menuStackPanel"/>
+        </ScrollViewer>
     </Canvas>
 </UserControl>
