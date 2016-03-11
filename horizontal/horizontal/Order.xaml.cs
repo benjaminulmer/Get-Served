@@ -37,6 +37,11 @@ namespace horizontal
             
         }
 
+        public void addToOrder(OrderInfo newOrder)
+        {
+            orderStackPanel.Children.Add(newOrder);
+        }
+
         private void orderButton_Click(object sender, RoutedEventArgs e)
         {
             foreach (OrderInfo item in orderStackPanel.Children)

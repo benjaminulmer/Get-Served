@@ -36,5 +36,17 @@ namespace horizontal
             (this.Parent as Panel).Children.Add(dinnerPage);
             (this.Parent as Panel).Children.Remove(this);
         }
+
+        private void orderButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = VisualTreeHelper.GetParent(this);
+            while (!(mainWindow is MainWindow)) { mainWindow = VisualTreeHelper.GetParent(mainWindow); }
+
+            OrderInfo newOrder = new OrderInfo();
+            newOrder.OrderName = "Sirloin Steak";
+            newOrder.PriceValue = "$35.00";
+            
+            (mainWindow as MainWindow).addToOrder(newOrder);
+        }
     }
 }
