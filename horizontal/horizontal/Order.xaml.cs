@@ -27,10 +27,14 @@ namespace horizontal
             info.name.Content = "Thing 1";
             info.price.Content = "$500.00";
             orderStackPanel.Children.Add(info);
-            OrderInfo info2 = new OrderInfo();
-            info2.name.Content = "Thing 2";
-            info2.price.Content = "$5.00";
-            orderStackPanel.Children.Add(info2);
+            for (uint i = 0; i < 15; i++)
+            {
+                OrderInfo info2 = new OrderInfo();
+                info2.name.Content = "Thing 2";
+                info2.price.Content = "$5.00";
+                orderStackPanel.Children.Add(info2);
+            }
+            
         }
     }
 }

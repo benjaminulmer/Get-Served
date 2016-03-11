@@ -24,5 +24,10 @@ namespace horizontal
         {
             InitializeComponent();
         }
+
+        private void deleteClick(object sender, MouseButtonEventArgs e)
+        {
+            (this.Parent as Panel).Children.Remove(this);
+        }
     }
 }
