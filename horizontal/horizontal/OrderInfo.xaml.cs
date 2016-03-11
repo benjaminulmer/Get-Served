@@ -20,6 +20,28 @@ namespace horizontal
     /// </summary>
     public partial class OrderInfo : UserControl
     {
+        private string orderName;
+        public string OrderName
+        {
+            get { return orderName; }
+            set
+            {
+                orderName = value;
+                this.name.Content = value;
+            }
+        }
+
+        private string priceValue;
+        public string PriceValue
+        {
+            get { return priceValue; }
+            set
+            {
+                priceValue = value;
+                this.price.Content = value;
+            }
+        }
+
         public OrderInfo()
         {
             InitializeComponent();

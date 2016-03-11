@@ -24,11 +24,19 @@ namespace horizontal
         Order order = new Order();
         Assistance assistance = new Assistance();
         Bill bill = new Bill();
+        private List<OrderInfo> ordersList;
 
         public MainWindow()
         {
             InitializeComponent();
             mainStackPanel.Children.Add(menu);
+            ordersList = new List<OrderInfo>();
+        }
+
+        public void addToOrder(OrderInfo newOrder)
+        {
+            ordersList.Add(newOrder);
+            order.addToOrder(newOrder);
         }
 
         private void menuButton_Click(object sender, RoutedEventArgs e)

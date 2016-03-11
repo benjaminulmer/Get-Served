@@ -20,11 +20,11 @@ namespace horizontal
     /// </summary>
     public partial class Menu : UserControl
     {
-        Dinner dinner = new Dinner();
-        Lunch lunch = new Lunch();
-        Kids kids = new Kids();
-        Dessert dessert = new Dessert();
-        Drinks drinks = new Drinks();
+        private Dinner dinner = new Dinner();
+        private Lunch lunch = new Lunch();
+        private Kids kids = new Kids();
+        private Dessert dessert = new Dessert();
+        private Drinks drinks = new Drinks();
 
         public Menu()
         {
