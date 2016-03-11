@@ -10,7 +10,7 @@
         <Label Content="Mains:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="513"/>
         <Image x:Name="ImageTopSirloin" Height="153" Canvas.Top="68" Width="296" Source="top sirloin.PNG" Canvas.Left="10"/>
         <Label x:Name="LabelTopSirloin" Content="Top Sirloin - $35" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonTopSirloin" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Button x:Name="ButtonTopSirloin" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonTopSirloin_Click"/>
         <Image x:Name="ImageSalmon" Height="153" Canvas.Top="68" Width="296" Source="baked salmon.PNG" Canvas.Left="329"/>
         <Label x:Name="LabelSalmon" Content="Baked Salmon - $25" Canvas.Left="342" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
         <Button x:Name="ButtonSalmon" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>

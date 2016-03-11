@@ -23,9 +23,18 @@ namespace horizontal
     /// </summary>
     public partial class InfoSirloin : UserControl
     {
-        public InfoSirloin()
+        Dinner dinnerPage;
+
+        public InfoSirloin(Dinner dinnerPage)
         {
             InitializeComponent();
+            this.dinnerPage = dinnerPage;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Add(dinnerPage);
+            (this.Parent as Panel).Children.Remove(this);
         }
     }
 }
