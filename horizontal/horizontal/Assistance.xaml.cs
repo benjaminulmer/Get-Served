@@ -39,6 +39,7 @@ namespace horizontal
             //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
+            assistanceDialog.customRequest.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void serverButton_Click(object sender, RoutedEventArgs e)
@@ -51,6 +52,7 @@ namespace horizontal
             //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
+            assistanceDialog.customRequest.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void managerButton_Click(object sender, RoutedEventArgs e)
@@ -63,6 +65,7 @@ namespace horizontal
             //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
+            assistanceDialog.customRequest.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void customButton_Click(object sender, RoutedEventArgs e)
@@ -75,6 +78,7 @@ namespace horizontal
             //assistanceDialog.topLabel.Content = "Testing";
             assistanceDialog.cancelButton.Visibility = System.Windows.Visibility.Visible;
             assistanceDialog.confirmButton.Visibility = System.Windows.Visibility.Visible;
+            assistanceDialog.customRequest.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }

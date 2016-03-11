@@ -26,6 +26,9 @@ namespace horizontal
         {
             this.parent = parent;
             InitializeComponent();
+            cancelButton.Visibility = System.Windows.Visibility.Hidden;
+            confirmButton.Visibility = System.Windows.Visibility.Hidden;
+            customRequest.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
@@ -33,6 +36,7 @@ namespace horizontal
             resetParentButtonColors();
             cancelButton.Visibility = System.Windows.Visibility.Hidden;
             confirmButton.Visibility = System.Windows.Visibility.Hidden;
+            customRequest.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void confirmButton_Click(object sender, RoutedEventArgs e)
@@ -40,6 +44,7 @@ namespace horizontal
             resetParentButtonColors();
             cancelButton.Visibility = System.Windows.Visibility.Hidden;
             confirmButton.Visibility = System.Windows.Visibility.Hidden;
+            customRequest.Visibility = System.Windows.Visibility.Hidden;
 
             parent.refillButton.IsEnabled = false;
             parent.serverButton.IsEnabled = false;
