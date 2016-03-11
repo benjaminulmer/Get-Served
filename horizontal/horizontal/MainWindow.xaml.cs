@@ -29,7 +29,6 @@ namespace horizontal
         {
             InitializeComponent();
             mainStackPanel.Children.Add(menu);
-            
         }
 
         private void menuButton_Click(object sender, RoutedEventArgs e)

@@ -4,6 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Canvas/>
+             d:DesignHeight="300" d:DesignWidth="300" Width="1012" Height="594">
+    <Canvas>
+        <ScrollViewer Height="495" Width="1002" Canvas.Top="99">
+            <StackPanel x:Name="orderStackPanel"/>
+        </ScrollViewer>
+        <Label Content="Finalize Order" Canvas.Left="50" Canvas.Top="10" FontSize="24"/>
+        <Label Content="Item" Canvas.Left="50" Canvas.Top="57" FontSize="20"/>
+        <Label Content="Price" Canvas.Left="893" Canvas.Top="60" FontSize="20"/>
+    </Canvas>
 </UserControl>
