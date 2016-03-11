@@ -24,5 +24,11 @@ namespace horizontal
         {
             InitializeComponent();
         }
+
+        private void requestBill_Click(object sender, RoutedEventArgs e)
+        {
+            requestBill.IsEnabled = false;
+            requestBill.Content = "Bill on its way!";
+        }
     }
 }
