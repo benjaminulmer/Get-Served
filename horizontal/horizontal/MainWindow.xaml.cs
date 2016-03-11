@@ -21,55 +21,78 @@ namespace horizontal
     public partial class MainWindow : Window
     {
         Menu menu = new Menu();
-        Bill bill = new Bill();
-        Assistance assistance = new Assistance();
         Order order = new Order();
+        Assistance assistance = new Assistance();
+        Bill bill = new Bill();
 
         public MainWindow()
         {
             InitializeComponent();
             mainStackPanel.Children.Add(menu);
-            menuButton.Background = Brushes.LightGray;
         }
 
         private void menuButton_Click(object sender, RoutedEventArgs e)
         {
             mainStackPanel.Children.Clear();
             mainStackPanel.Children.Add(menu);
+
             menuButton.Background = Brushes.LightGray;
+            orderButton.Background = Brushes.White;
             billButton.Background = Brushes.White;
             assistanceButton.Background = Brushes.White;
-            orderButton.Background = Brushes.White;
-        }
 
-        private void billButton_Click(object sender, RoutedEventArgs e)
-        {
-            mainStackPanel.Children.Clear();
-            mainStackPanel.Children.Add(bill);
-            menuButton.Background = Brushes.White;
-            billButton.Background = Brushes.LightGray;
-            assistanceButton.Background = Brushes.White;
-            orderButton.Background = Brushes.White;
-        }
-
-        private void assistanceButton_Click(object sender, RoutedEventArgs e)
-        {
-            mainStackPanel.Children.Clear();
-            mainStackPanel.Children.Add(assistance);
-            menuButton.Background = Brushes.White;
-            billButton.Background = Brushes.White;
-            assistanceButton.Background = Brushes.LightGray;
-            orderButton.Background = Brushes.White;
+            menuButton.FontWeight = FontWeights.Bold;
+            orderButton.FontWeight = FontWeights.Regular;
+            assistanceButton.FontWeight = FontWeights.Regular;
+            billButton.FontWeight = FontWeights.Regular;
         }
 
         private void orderButton_Click(object sender, RoutedEventArgs e)
         {
             mainStackPanel.Children.Clear();
             mainStackPanel.Children.Add(order);
+
             menuButton.Background = Brushes.White;
+            orderButton.Background = Brushes.LightGray;
             billButton.Background = Brushes.White;
             assistanceButton.Background = Brushes.White;
-            orderButton.Background = Brushes.LightGray;
+
+            menuButton.FontWeight = FontWeights.Regular;
+            orderButton.FontWeight = FontWeights.Bold;
+            assistanceButton.FontWeight = FontWeights.Regular;
+            billButton.FontWeight = FontWeights.Regular;
+        }
+
+        private void billButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainStackPanel.Children.Clear();
+            mainStackPanel.Children.Add(bill);
+
+            menuButton.Background = Brushes.White;
+            orderButton.Background = Brushes.White;
+            billButton.Background = Brushes.LightGray;
+            assistanceButton.Background = Brushes.White;
+
+            menuButton.FontWeight = FontWeights.Regular;
+            orderButton.FontWeight = FontWeights.Regular;
+            assistanceButton.FontWeight = FontWeights.Regular;
+            billButton.FontWeight = FontWeights.Bold;
+        }
+
+        private void assistanceButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainStackPanel.Children.Clear();
+            mainStackPanel.Children.Add(assistance);
+
+            menuButton.Background = Brushes.White;
+            orderButton.Background = Brushes.White;
+            billButton.Background = Brushes.White;
+            assistanceButton.Background = Brushes.LightGray;
+
+            menuButton.FontWeight = FontWeights.Regular;
+            orderButton.FontWeight = FontWeights.Regular;
+            assistanceButton.FontWeight = FontWeights.Bold;
+            billButton.FontWeight = FontWeights.Regular;
         }
     }
 }

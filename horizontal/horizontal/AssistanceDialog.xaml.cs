@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics; 
 
 namespace horizontal
 {
@@ -26,26 +27,9 @@ namespace horizontal
         {
             this.parent = parent;
             InitializeComponent();
-        }
-
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            resetParentButtonColors();
             cancelButton.Visibility = System.Windows.Visibility.Hidden;
             confirmButton.Visibility = System.Windows.Visibility.Hidden;
-        }
-
-        private void confirmButton_Click(object sender, RoutedEventArgs e)
-        {
-            resetParentButtonColors();
-            cancelButton.Visibility = System.Windows.Visibility.Hidden;
-            confirmButton.Visibility = System.Windows.Visibility.Hidden;
-
-            parent.refillButton.IsEnabled = false;
-            parent.serverButton.IsEnabled = false;
-            parent.managerButton.IsEnabled = false;
-            parent.customButton.IsEnabled = false;
-            topLabel.Content = "Assistance is on its way!";
+            customRequest.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void resetParentButtonColors()
@@ -55,5 +39,47 @@ namespace horizontal
             parent.managerButton.Background = Brushes.White;
             parent.customButton.Background = Brushes.White;
         }
+
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            resetParentButtonColors();
+            cancelButton.Visibility = System.Windows.Visibility.Hidden;
+            confirmButton.Visibility = System.Windows.Visibility.Hidden;
+            customRequest.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void confirmButton_Click(object sender, RoutedEventArgs e)
+        {
+            resetParentButtonColors();
+            cancelButton.Visibility = System.Windows.Visibility.Hidden;
+            confirmButton.Visibility = System.Windows.Visibility.Hidden;
+            customRequest.Visibility = System.Windows.Visibility.Hidden;
+
+            parent.refillButton.IsEnabled = false;
+            parent.serverButton.IsEnabled = false;
+            parent.managerButton.IsEnabled = false;
+            parent.customButton.IsEnabled = false;
+            topLabel.Content = "Assistance is on its way!";
+
+            okButton.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void okButtonClicked(object sender, RoutedEventArgs e)
+        {
+            resetParentButtonColors();
+            cancelButton.Visibility = System.Windows.Visibility.Hidden;
+            confirmButton.Visibility = System.Windows.Visibility.Hidden;
+            parent.refillButton.IsEnabled = true;
+            parent.serverButton.IsEnabled = true;
+            parent.managerButton.IsEnabled = true;
+            parent.customButton.IsEnabled = true;
+
+            topLabel.Content = "";
+            okButton.Visibility = System.Windows.Visibility.Hidden;
+
+
+        }
+
     }
 }

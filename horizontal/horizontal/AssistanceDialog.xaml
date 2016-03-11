@@ -7,7 +7,9 @@
              d:DesignHeight="300" d:DesignWidth="300" Width="985" Height="254">
     <Canvas>
         <Label x:Name="topLabel" Content="" Canvas.Left="186" Canvas.Top="5" Width="616" HorizontalContentAlignment="Center" FontSize="24"/>
-        <Button x:Name="cancelButton" Content="Cancel" Canvas.Left="287" Canvas.Top="52" Width="150" Height="75" FontSize="24" Click="cancelButton_Click" Background="White" Visibility="Hidden"/>
-        <Button x:Name="confirmButton" Content="Confirm" Canvas.Left="558" Canvas.Top="52" Width="150" Height="75" FontSize="24" Click="confirmButton_Click" Background="White" Visibility="Hidden"/>
+        <Button x:Name="cancelButton" Content="Cancel" Canvas.Left="287" Canvas.Top="52" Width="150" Height="75" FontSize="24" Click="cancelButton_Click" Background="White"/>
+        <Button x:Name="confirmButton" Content="Confirm" Canvas.Left="558" Canvas.Top="52" Width="150" Height="75" FontSize="24" Click="confirmButton_Click" Background="White"/>
+        <Button x:Name="okButton" Content="OK" Canvas.Left="422" Canvas.Top="132" Width="150" Height="75" FontSize="24" Click="okButtonClicked" Background="White" Visibility="Hidden"/> 
+        <TextBox x:Name="customRequest" Height="42" Canvas.Left="186" TextWrapping="Wrap" Text="Enter a request..." Canvas.Top="5" Width="616" FontSize="18"/>
     </Canvas>
 </UserControl>

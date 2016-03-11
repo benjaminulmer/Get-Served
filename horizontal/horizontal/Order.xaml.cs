@@ -23,6 +23,27 @@ namespace horizontal
         public Order()
         {
             InitializeComponent();
+            OrderInfo info = new OrderInfo();
+            info.name.Content = "Thing 1";
+            info.price.Content = "$500.00";
+            orderStackPanel.Children.Add(info);
+            for (int i = 0; i < 15; i++)
+            {
+                OrderInfo info2 = new OrderInfo();
+                info2.name.Content = "Thing 2";
+                info2.price.Content = "$5.00";
+                orderStackPanel.Children.Add(info2);
+            }
+            
+        }
+
+        private void orderButton_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (OrderInfo item in orderStackPanel.Children)
+            {
+                //do a thing
+            }
+            orderStackPanel.Children.Clear();
         }
     }
 }
