@@ -21,17 +21,32 @@ namespace horizontal
     public partial class Dinner : UserControl
     {
         InfoSirloin sirloin;
-
+        InfoCaesarSalad salad;
+        InfoSalmon salmon;
 
         public Dinner()
         {
             InitializeComponent();
             sirloin = new InfoSirloin(this);
+            salad = new InfoCaesarSalad(this);
+            salmon = new InfoSalmon(this);
         }
 
         private void ButtonTopSirloin_Click(object sender, RoutedEventArgs e)
         {
             (this.Parent as Panel).Children.Add(sirloin);
+            (this.Parent as Panel).Children.Remove(this);
+        }
+
+        private void ButtonSalad_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Add(salad);
+            (this.Parent as Panel).Children.Remove(this);
+        }
+
+        private void ButtonSalmon_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Add(salmon);
             (this.Parent as Panel).Children.Remove(this);
         }
     }

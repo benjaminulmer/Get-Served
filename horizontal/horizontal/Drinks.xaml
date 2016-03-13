@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             mc:Ignorable="d" Height="767.271" Width="1012">
+    <Canvas HorizontalAlignment="Left" Height="767" VerticalAlignment="Top" Width="1012">
+        <Label Content="Featured Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
+        <Image x:Name="ImageWater" Height="153" Canvas.Top="68" Width="296" Source="water.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelWater" Content="Water" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonWater" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageCola" Height="153" Canvas.Top="68" Width="296" Source="cocacola.jpg" Canvas.Left="329"/>
+        <Label x:Name="LabelCola" Content="Coca Cola - $2.50" Canvas.Left="342" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonCola" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+    </Canvas>
 </UserControl>
