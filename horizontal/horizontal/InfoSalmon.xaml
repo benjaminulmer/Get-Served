@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="horizontal.InfoSalmon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="860" d:DesignWidth="1020">
+    <Canvas HorizontalAlignment="Left" Height="860" VerticalAlignment="Top" Width="1020">
+        <Image Height="314" Width="555" Source="baked salmon.PNG" Canvas.Left="10" Canvas.Top="10"/>
+        <Label Content="Oven Baked Salmon" Canvas.Left="10" Canvas.Top="319" FontSize="24" FontWeight="Bold"/>
+        <Label Content="$25.00" Canvas.Left="470" Canvas.Top="319" FontSize="24" FontWeight="Bold"/>
+        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Served on rice and steamed asparagus." Canvas.Top="366" FontSize="18" FontWeight="Bold" Width="545"/>
+        <Image Height="417" Canvas.Left="285" Canvas.Top="443" Width="270" Source="Nutrition.JPG"/>
+        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="461" FontSize="16" Width="259"><Run Text="Health Information:  "/><LineBreak/><Run Text="• "/><Run Text="C"/><Run Text="ontain"/><Run Text="s"/><Run Text=" nuts"/><LineBreak/><Run Text="• "/><Run Text="Contains lemons"/><LineBreak/><Run Text="• "/><Run Text="Gluten-free"/></TextBlock>
+        <Button x:Name ="returnButton" Content="Return to Menu" Canvas.Left="10" Canvas.Top="795" Width="259" Height="55" FontSize="18" Click="Button_Click"/>
+        <Rectangle Fill="#FFF4F4F5" Height="840" Canvas.Left="570" Stroke="Black" Canvas.Top="10" Width="399"/>
+        <Label Content="Place your order:" Canvas.Left="570" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Add-ons:" Canvas.Left="578" Canvas.Top="57" FontSize="18" FontWeight="Bold"/>
+        <CheckBox Content="Extra vegetables ($3.50)" Canvas.Left="595" Canvas.Top="96" FontSize="14"/>
+        <CheckBox Content="Substitute rice for a baked potato ($3.00)" Canvas.Left="595" Canvas.Top="119" FontSize="14"/>
+        <CheckBox Content="Add cajun sauce ($2.00)" Canvas.Left="595" Canvas.Top="142" FontSize="14"/>
+        <Label Content="Special requests:" Canvas.Left="570" Canvas.Top="165" FontSize="18" FontWeight="Bold"/>
+        <CheckBox Content="Substitute asparagus for spinach" Canvas.Left="595" Canvas.Top="204" FontSize="14"/>
+        <CheckBox Content="No lemons" Canvas.Left="595" Canvas.Top="227" FontSize="14"/>
+        <CheckBox Content="Nut-free sauce" Canvas.Left="595" Canvas.Top="250" FontSize="14"/>
+        <Label Content="Enter custom request:" Canvas.Left="565" Canvas.Top="290" FontSize="18" FontWeight="Bold"/>
+        <TextBox Height="173" Canvas.Left="581" TextWrapping="Wrap" Text="" Canvas.Top="324" Width="373"/>
+        <Label Content="Total, after add-ons: $25.00" Canvas.Left="578" Canvas.Top="704" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="orderButton" Content="ADD TO ORDER" Canvas.Left="581" Canvas.Top="743" Width="373" Height="88" FontSize="20" Background="#FFBDF4BB" Click="orderButton_Click"/>
+    </Canvas>
+</UserControl>

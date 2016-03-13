@@ -13,9 +13,9 @@
         <Button x:Name="ButtonTopSirloin" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonTopSirloin_Click"/>
         <Image x:Name="ImageSalmon" Height="153" Canvas.Top="68" Width="296" Source="baked salmon.PNG" Canvas.Left="329"/>
         <Label x:Name="LabelSalmon" Content="Baked Salmon - $25" Canvas.Left="342" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonSalmon" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Button x:Name="ButtonSalmon" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalmon_Click"/>
         <Image x:Name="ImageSalad" Height="158" Canvas.Top="68" Width="270" Source="salad.PNG" Canvas.Left="662"/>
         <Label x:Name="LabelSalad" Content="Caesar Salad - $15" Canvas.Left="662" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonSalad" Content="Info/Order" Canvas.Left="662" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Button x:Name="ButtonSalad" Content="Info/Order" Canvas.Left="662" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalad_Click"/>
     </Canvas>
 </UserControl>

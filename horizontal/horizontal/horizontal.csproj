@@ -77,6 +77,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InfoCaesarSalad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InfoSalmon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="InfoSirloin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +122,12 @@
     </Compile>
     <Compile Include="Drinks.xaml.cs">
       <DependentUpon>Drinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoCaesarSalad.xaml.cs">
+      <DependentUpon>InfoCaesarSalad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoSalmon.xaml.cs">
+      <DependentUpon>InfoSalmon.xaml</DependentUpon>
     </Compile>
     <Compile Include="InfoSirloin.xaml.cs">
       <DependentUpon>InfoSirloin.xaml</DependentUpon>
@@ -191,6 +205,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="close icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lunch-salads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="desserts1.jpg" />
+    <Resource Include="kids-sirloin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cocacola.jpg" />
+    <Resource Include="water.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
