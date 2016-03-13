@@ -31,6 +31,9 @@ namespace horizontal
             InitializeComponent();
             mainStackPanel.Children.Add(menu);
             ordersList = new List<OrderInfo>();
+
+            menuButton.Background = Brushes.LightGray;
+            menuButton.FontWeight = FontWeights.Bold;
         }
 
         public void addToOrder(OrderInfo newOrder)

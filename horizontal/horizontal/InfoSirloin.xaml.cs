@@ -47,6 +47,9 @@ namespace horizontal
             newOrder.PriceValue = "$35.00";
             
             (mainWindow as MainWindow).addToOrder(newOrder);
+
+            (this.Parent as Panel).Children.Add(dinnerPage);
+            (this.Parent as Panel).Children.Remove(this);
         }
     }
 }
