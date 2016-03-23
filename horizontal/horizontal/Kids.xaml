@@ -3,11 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="767.271" Width="1012">
-    <Canvas HorizontalAlignment="Left" Height="767" VerticalAlignment="Top" Width="1012">
-        <Label Content="Featured Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
-        <Image x:Name="ImageKidsSirloin" Height="153" Canvas.Top="68" Width="296" Source="kids-sirloin.jpg" Canvas.Left="10"/>
-        <Label x:Name="LabelKidsSirloin" Content="Kids' Sirloin Steak - $15" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonKidsSirloin" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+             mc:Ignorable="d" Height="1002.644" Width="1012">
+    <Canvas HorizontalAlignment="Left" Height="1003" VerticalAlignment="Top" Width="1012">
+        <Label Content="Popular Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
+        <Image x:Name="ImageKidsSirloin_Feature" Height="153" Canvas.Top="68" Width="296" Source="kids-sirloin.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelKidsSirloin_Feature" Content="Kids' Sirloin Steak - $15" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonKidsSirloin_Feature" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Label Content="Lunch Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="319"/>
+        <Image x:Name="ImageSoup" Height="153" Canvas.Top="377" Width="296" Source="chickensoup.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelSoup" Content="Chicken Noodle Soup - $9" Canvas.Left="23" Canvas.Top="535" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonSoup" Content="Info/Order" Canvas.Left="23" Canvas.Top="566" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Label Content="Dinner Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="640"/>
+        <Image x:Name="ImageKidsSirloin" Height="153" Canvas.Top="698" Width="296" Source="kids-sirloin.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelKidsSirloin" Content="Kids' Sirloin Steak - $15" Canvas.Left="23" Canvas.Top="856" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonKidsSirloin" Content="Info/Order" Canvas.Left="23" Canvas.Top="887" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageMac" Height="153" Canvas.Top="377" Width="296" Source="macandcheese.jpg" Canvas.Left="352"/>
+        <Label x:Name="LabelMac" Content="Mac and Cheese - $11" Canvas.Left="365" Canvas.Top="535" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonMac" Content="Info/Order" Canvas.Left="365" Canvas.Top="566" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageNuggets" Height="153" Canvas.Top="377" Width="296" Source="nuggets.jpg" Canvas.Left="688"/>
+        <Label x:Name="LabelNuggets" Content="Chicken Nuggets - $10" Canvas.Left="701" Canvas.Top="535" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonNuggets" Content="Info/Order" Canvas.Left="701" Canvas.Top="566" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageBurger_Feature" Height="153" Canvas.Top="68" Width="296" Source="jr-cheeseburger.jpg" Canvas.Left="339"/>
+        <Label x:Name="LabelBurger_Feature" Content="Junior Cheeseburger - $14" Canvas.Left="352" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonBurger_Feature" Content="Info/Order" Canvas.Left="352" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageSpaghetti" Height="153" Canvas.Top="698" Width="296" Source="Spaghetti.jpg" Canvas.Left="352"/>
+        <Label x:Name="LabelSpaghetti" Content="Spaghetti - $13" Canvas.Left="365" Canvas.Top="856" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonSpaghetti" Content="Info/Order" Canvas.Left="365" Canvas.Top="887" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageBurger" Height="153" Canvas.Top="698" Width="296" Source="jr-cheeseburger.jpg" Canvas.Left="688"/>
+        <Label x:Name="LabelBurger" Content="Junior Cheeseburger - $14" Canvas.Left="701" Canvas.Top="856" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonBurger" Content="Info/Order" Canvas.Left="701" Canvas.Top="887" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageNuggets_Feature" Height="153" Canvas.Top="68" Width="296" Source="nuggets.jpg" Canvas.Left="688"/>
+        <Label x:Name="LabelNuggets_Feature" Content="Chicken Nuggets - $10" Canvas.Left="701" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonNuggets_Feature" Content="Info/Order" Canvas.Left="701" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
     </Canvas>
 </UserControl>
