@@ -217,6 +217,48 @@
     <Resource Include="cocacola.jpg" />
     <Resource Include="water.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cranberryjuice.jpg" />
+    <Resource Include="icedtea.png" />
+    <Resource Include="milk.jpg" />
+    <Resource Include="orangejuice.jpg" />
+    <Resource Include="rootbeer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apple_juice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="blueberryicecream.jpg" />
+    <Resource Include="cremebrulee.jpg" />
+    <Resource Include="fruit-tart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mousse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chickensoup.jpg" />
+    <Resource Include="jr-cheeseburger.jpg" />
+    <Resource Include="macandcheese.jpg" />
+    <Resource Include="Spaghetti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="nuggets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="berrysalad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="thaisalad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chipotlewrap.jpg" />
+    <Resource Include="club-sandwich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bruschetta.jpg" />
+    <Resource Include="chicken.jpg" />
+    <Resource Include="shrimp.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -3,19 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="767.271" Width="1012">
-    <Canvas HorizontalAlignment="Left" Height="767" VerticalAlignment="Top" Width="1012">
+             mc:Ignorable="d" Height="954.771" Width="1012">
+    <Canvas HorizontalAlignment="Left" Width="1012" Margin="0,0,0,43">
         <Label Content="Featured Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
-        <Label Content="Appetizers:" FontSize="32" FontWeight="Bold" Canvas.Top="281" Canvas.Left="10"/>
-        <Label Content="Mains:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="513"/>
-        <Image x:Name="ImageTopSirloin" Height="153" Canvas.Top="68" Width="296" Source="top sirloin.PNG" Canvas.Left="10"/>
-        <Label x:Name="LabelTopSirloin" Content="Top Sirloin - $35" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonTopSirloin" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonTopSirloin_Click"/>
-        <Image x:Name="ImageSalmon" Height="153" Canvas.Top="68" Width="296" Source="baked salmon.PNG" Canvas.Left="329"/>
-        <Label x:Name="LabelSalmon" Content="Baked Salmon - $25" Canvas.Left="342" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonSalmon" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalmon_Click"/>
-        <Image x:Name="ImageSalad" Height="158" Canvas.Top="68" Width="270" Source="salad.PNG" Canvas.Left="662"/>
-        <Label x:Name="LabelSalad" Content="Caesar Salad - $15" Canvas.Left="662" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonSalad" Content="Info/Order" Canvas.Left="662" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalad_Click"/>
+        <Label Content="Appetizers:" FontSize="32" FontWeight="Bold" Canvas.Top="313" Canvas.Left="10"/>
+        <Label Content="Mains:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="616"/>
+        <Image x:Name="ImageTopSirloin_Feature" Height="153" Canvas.Top="68" Width="296" Source="top sirloin.PNG" Canvas.Left="10"/>
+        <Label x:Name="LabelTopSirloin_Feature" Content="Top Sirloin - $35" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonTopSirloin_Feature" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonTopSirloin_Click"/>
+        <Image x:Name="ImageSalmon_Feature" Height="153" Canvas.Top="68" Width="296" Source="baked salmon.PNG" Canvas.Left="329"/>
+        <Label x:Name="LabelSalmon_Feature" Content="Baked Salmon - $25" Canvas.Left="342" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonSalmon_Feature" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalmon_Click"/>
+        <Image x:Name="ImageSalad_Feature" Height="158" Canvas.Top="68" Width="270" Source="salad.PNG" Canvas.Left="662"/>
+        <Label x:Name="LabelSalad_Feature" Content="Caesar Salad - $15" Canvas.Left="662" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonSalad_Feature" Content="Info/Order" Canvas.Left="662" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalad_Click"/>
+        <Image x:Name="ImageSalad" Height="158" Canvas.Top="376" Width="270" Source="salad.PNG" Canvas.Left="23"/>
+        <Label x:Name="LabelSalad" Content="Caesar Salad - $15" Canvas.Left="23" Canvas.Top="534" Height="30" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonSalad" Content="Info/Order" Canvas.Left="23" Canvas.Top="564" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalad_Click"/>
+        <Image x:Name="ImageTopSirloin" Height="154" Canvas.Top="684" Width="296" Source="top sirloin.PNG" Canvas.Left="330"/>
+        <Label x:Name="LabelTopSirloin" Content="Top Sirloin - $35" Canvas.Left="343" Canvas.Top="842" Height="32" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonTopSirloin" Content="Info/Order" Canvas.Left="343" Canvas.Top="874" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonTopSirloin_Click"/>
+        <Image x:Name="ImageSalmon" Height="154" Canvas.Top="684" Width="296" Source="baked salmon.PNG" Canvas.Left="649"/>
+        <Label x:Name="LabelSalmon" Content="Baked Salmon - $25" Canvas.Left="662" Canvas.Top="842" Height="32" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonSalmon" Content="Info/Order" Canvas.Left="662" Canvas.Top="874" Width="270" Height="34" Background="#FFAFE4B1" Click="ButtonSalmon_Click"/>
+        <Image x:Name="ImageChicken" Height="158" Canvas.Top="686" Width="270" Source="chicken.jpg" Canvas.Left="23"/>
+        <Label x:Name="LabelChicken" Content="Rotisserie Chicken - $30" Canvas.Left="23" Canvas.Top="844" Height="30" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonChicken" Content="Info/Order" Canvas.Left="23" Canvas.Top="874" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageShrimp" Height="154" Canvas.Top="374" Width="296" Source="shrimp.jpg" Canvas.Left="330"/>
+        <Label x:Name="LabelShrimp" Content="Breaded Shrimp - $15" Canvas.Left="343" Canvas.Top="532" Height="32" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonShrimp" Content="Info/Order" Canvas.Left="343" Canvas.Top="564" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageBruschetta" Height="154" Canvas.Top="374" Width="296" Source="bruschetta.jpg" Canvas.Left="649"/>
+        <Label x:Name="LabelBruschetta" Content="Bruschetta - $12" Canvas.Left="662" Canvas.Top="532" Height="32" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonBruschetta" Content="Info/Order" Canvas.Left="662" Canvas.Top="564" Width="270" Height="34" Background="#FFAFE4B1"/>
     </Canvas>
 </UserControl>

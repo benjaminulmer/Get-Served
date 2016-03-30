@@ -48,5 +48,15 @@ namespace horizontal
             (this.Parent as Panel).Children.Add(dinnerPage);
             (this.Parent as Panel).Children.Remove(this);
         }
+
+        private void nutritionButton_Click(object sender, RoutedEventArgs e)
+        {
+            nutritionPopup.IsOpen = true;
+        }
+
+        private void ButtonPopup_Click(object sender, RoutedEventArgs e)
+        {
+            nutritionPopup.IsOpen = false;
+        }
     }
 }

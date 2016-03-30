@@ -3,14 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="767.271" Width="1012">
+             mc:Ignorable="d" Height="1265.271" Width="1012">
     <Canvas HorizontalAlignment="Left" Height="767" VerticalAlignment="Top" Width="1012">
-        <Label Content="Featured Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
-        <Image x:Name="ImageWater" Height="153" Canvas.Top="68" Width="296" Source="water.jpg" Canvas.Left="10"/>
-        <Label x:Name="LabelWater" Content="Water" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonWater" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
-        <Image x:Name="ImageCola" Height="153" Canvas.Top="68" Width="296" Source="cocacola.jpg" Canvas.Left="329"/>
-        <Label x:Name="LabelCola" Content="Coca Cola - $2.50" Canvas.Left="342" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
-        <Button x:Name="ButtonCola" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Label Content="Popular Items:" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
+        <Image x:Name="ImageWater_Feature" Height="153" Canvas.Top="68" Width="296" Source="water.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelWater_Feature" Content="Water" Canvas.Left="23" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonWater_Feature" Content="Info/Order" Canvas.Left="23" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageCola_Feature" Height="153" Canvas.Top="68" Width="296" Source="cocacola.jpg" Canvas.Left="329"/>
+        <Label x:Name="LabelCola_Feature" Content="Coca Cola - $2.50" Canvas.Left="342" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonCola_Feature" Content="Info/Order" Canvas.Left="342" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Label Content="Juice:" Canvas.Left="23" FontSize="32" FontWeight="Bold" Canvas.Top="314"/>
+        <Image x:Name="ImageOrange" Height="153" Canvas.Top="362" Width="296" Source="orangejuice.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelOrange" Content="Orange Juice - $2.50" Canvas.Left="23" Canvas.Top="520" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonOrange" Content="Info/Order" Canvas.Left="23" Canvas.Top="551" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageApple" Height="153" Canvas.Top="362" Width="296" Source="apple_juice.jpg" Canvas.Left="329"/>
+        <Label x:Name="LabelApple" Content="Apple Juice - $2.50" Canvas.Left="342" Canvas.Top="520" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonApple" Content="Info/Order" Canvas.Left="342" Canvas.Top="551" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Label Content="Fountain Drinks:" Canvas.Left="23" FontSize="32" FontWeight="Bold" Canvas.Top="610"/>
+        <Image x:Name="ImageRoot" Height="153" Canvas.Top="658" Width="296" Source="rootbeer.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelRoot" Content="Root Beer - $2.50" Canvas.Left="23" Canvas.Top="816" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonRoot" Content="Info/Order" Canvas.Left="23" Canvas.Top="847" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageCola" Height="153" Canvas.Top="658" Width="296" Source="cocacola.jpg" Canvas.Left="329"/>
+        <Label x:Name="LabelCola" Content="Coca Cola - $2.50" Canvas.Left="342" Canvas.Top="816" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonCola" Content="Info/Order" Canvas.Left="342" Canvas.Top="847" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Label Content="Other:" Canvas.Left="23" FontSize="32" FontWeight="Bold" Canvas.Top="910"/>
+        <Image x:Name="ImageWater" Height="153" Canvas.Top="958" Width="296" Source="water.jpg" Canvas.Left="10"/>
+        <Label x:Name="LabelWater" Content="Water" Canvas.Left="23" Canvas.Top="1116" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonWater" Content="Info/Order" Canvas.Left="23" Canvas.Top="1147" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageMilk" Height="153" Canvas.Top="958" Width="296" Source="milk.jpg" Canvas.Left="329"/>
+        <Label x:Name="LabelMilk" Content="Milk - $2.50" Canvas.Left="342" Canvas.Top="1116" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonMilk" Content="Info/Order" Canvas.Left="342" Canvas.Top="1147" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageCran" Height="153" Canvas.Top="362" Width="296" Source="cranberryjuice.jpg" Canvas.Left="645"/>
+        <Label x:Name="LabelCran" Content="Cranberry Juice - $2.50" Canvas.Left="658" Canvas.Top="520" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonCran" Content="Info/Order" Canvas.Left="658" Canvas.Top="551" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageOrange_Feature" Height="153" Canvas.Top="68" Width="296" Source="orangejuice.jpg" Canvas.Left="645"/>
+        <Label x:Name="LabelOrange_Feature" Content="Orange Juice - $2.50" Canvas.Left="658" Canvas.Top="226" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonOrange_Feature" Content="Info/Order" Canvas.Left="658" Canvas.Top="257" Width="270" Height="34" Background="#FFAFE4B1"/>
+        <Image x:Name="ImageTea" Height="153" Canvas.Top="658" Width="296" Source="icedtea.png" Canvas.Left="645"/>
+        <Label x:Name="LabelTea" Content="Iced Tea - $2.50" Canvas.Left="658" Canvas.Top="816" Height="31" Width="270" FontFamily="Mongolian Baiti" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="ButtonTea" Content="Info/Order" Canvas.Left="658" Canvas.Top="847" Width="270" Height="34" Background="#FFAFE4B1"/>
     </Canvas>
 </UserControl>
