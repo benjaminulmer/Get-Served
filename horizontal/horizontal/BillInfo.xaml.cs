@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace horizontal
 {
     /// <summary>
-    /// Interaction logic for Bill.xaml
+    /// Interaction logic for BillInfo.xaml
     /// </summary>
-    public partial class Bill : UserControl
+    public partial class BillInfo : UserControl
     {
-        public Bill()
+        public BillInfo()
         {
             InitializeComponent();
-            billsPanel.Children.Add(new BillInfo());
-        }
-
-        private void requestBill_Click(object sender, RoutedEventArgs e)
-        {
-            requestBill.IsEnabled = false;
-            requestBill.Content = "Bill on its way!";
         }
     }
 }
