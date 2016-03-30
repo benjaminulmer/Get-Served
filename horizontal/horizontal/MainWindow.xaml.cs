@@ -105,5 +105,17 @@ namespace horizontal
             assistanceButton.FontWeight = FontWeights.Bold;
             billButton.FontWeight = FontWeights.Regular;
         }
+
+        private void numPeopleSelected(object sender, SelectionChangedEventArgs e)
+        {
+            int numPeople = numPeopleSelector.SelectedIndex + 1;
+            peopleStackPanel.Children.Clear();
+            for (int i = 0; i < numPeople; i++)
+            {
+                Label label = new Label();
+                label.Content = "test";
+                peopleStackPanel.Children.Add(label);
+            }
+        }
     }
 }
