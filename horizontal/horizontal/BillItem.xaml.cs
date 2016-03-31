@@ -22,18 +22,18 @@ namespace horizontal
     {
         public String item;
         public List<String> users;
-        public String price;
+        public float price;
         public String mods;
-        public String modsPrice;
+        public float modsPrice;
 
-        public BillItem(String item, List<String> users, String price)
+        public BillItem(String item, List<String> users, float price)
         {
             InitializeComponent();
             this.item = item;
             this.users = users;
             this.price = price;
-            this.mods = "";
-            this.modsPrice = "";
+            this.mods = "No modifications";
+            this.modsPrice = 0.0F;
 
             String userLabelString;
             if (users.Count == 0) { userLabelString = ""; }
@@ -48,13 +48,13 @@ namespace horizontal
             }
 
             itemLabel.Content = item;
-            priceLabel.Content = price;
+            priceLabel.Content = "$" + price.ToString("0.00");
             userLabel.Content = userLabelString;
-            modsLabel.Text = "";
-            modsPriceLabel.Content = "";
+            modsLabel.Text = this.mods;
+            modsPriceLabel.Content = "$0.00";
         }
 
-        public BillItem(String item, List<String> users, String price, String mods, String modsPrice)
+        public BillItem(String item, List<String> users, float price, String mods, float modsPrice)
         {
             InitializeComponent();
             this.item = item;
@@ -77,10 +77,10 @@ namespace horizontal
             }
 
             itemLabel.Content = item;
-            priceLabel.Content = price;
+            priceLabel.Content = "$" + price.ToString("0.00");
             userLabel.Content = userLabelString;
             modsLabel.Text = mods;
-            modsPriceLabel.Content = modsPrice;
+            modsPriceLabel.Content = "$" + modsPrice.ToString("0.00");
         }
     }
 }
