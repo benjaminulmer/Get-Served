@@ -7,9 +7,9 @@
     <Canvas HorizontalAlignment="Left" Height="596" VerticalAlignment="Top" Width="1012">
         <Label x:Name="YourBill" Content="Your Bills" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
         <Button x:Name="requestBill" Content="Request Bill(s)" Canvas.Left="727" Canvas.Top="529" Width="255" Height="38" Background="White" Click="requestBill_Click" FontSize="20"/>
-        <Button x:Name="splitButton" Content="Split the Bill" Canvas.Left="25" Canvas.Top="529" Width="255" Height="38" Background="White" FontSize="20"/>
+        <Button x:Name="splitButton" Content="Split the Bill" Canvas.Left="25" Canvas.Top="529" Width="255" Height="38" Background="White" FontSize="20" Click="splitButton_Click"/>
         <ScrollViewer Height="457" Width="992" Canvas.Left="10" Canvas.Top="67" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto">
-            <StackPanel x:Name="billsPanel" Height="435" Width="989" Orientation="Horizontal"/>
+            <StackPanel x:Name="billsPanel" Orientation="Horizontal"/>
 
         </ScrollViewer>
 

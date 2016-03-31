@@ -20,9 +20,26 @@ namespace horizontal
     /// </summary>
     public partial class BillInfo : UserControl
     {
+        public List<BillItem> items;
+
         public BillInfo()
         {
             InitializeComponent();
+
+            items = new List<BillItem>();
+
+        }
+
+        public void addItem(BillItem item)
+        {
+            billPanel.Children.Add(item);
+            this.items.Add(item);
+        }
+
+        public void removeItem(BillItem item)
+        {
+            billPanel.Children.Remove(item);
         }
     }
+
 }

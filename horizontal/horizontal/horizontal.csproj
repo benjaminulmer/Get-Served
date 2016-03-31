@@ -69,6 +69,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BillItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dessert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +124,9 @@
     </Compile>
     <Compile Include="BillInfo.xaml.cs">
       <DependentUpon>BillInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BillItem.xaml.cs">
+      <DependentUpon>BillItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dessert.xaml.cs">
       <DependentUpon>Dessert.xaml</DependentUpon>
