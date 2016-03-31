@@ -3,20 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Canvas HorizontalAlignment="Left" Height="767" VerticalAlignment="Top" Width="1012">
-        <Label x:Name="YourBill" Content="Your Bill" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
-        <Label x:Name="BillTopSirloinName" Content="Top Sirloin 10z" FontSize="20" FontWeight="Regular" Canvas.Top="68" Canvas.Left="58"/>
-        <Label x:Name="TopSirloinPriceMain" Content="$35.00" FontSize="20" FontWeight="Regular" Canvas.Top="68" Canvas.Left="844"/>
-        <Label x:Name="BillTopSirloinCooked" Content="Medium Rare" FontSize="17" FontWeight="Regular" Canvas.Top="105" Canvas.Left="105"/>
-        <Label x:Name="BillTopSirloinAddOn" Content="+Peppercorn sauce" FontSize="17" FontWeight="Regular" Canvas.Top="138" Canvas.Left="105"/>
-        <Label x:Name="BillTopSirloinAddPrice" Content="$4.00" FontSize="17" FontWeight="Regular" Canvas.Top="138" Canvas.Left="862"/>
-        <Label x:Name="BillTopSirloinSpecialRequest" Content="Substitute: French fries" FontSize="17" FontWeight="Regular" Canvas.Top="171" Canvas.Left="105"/>
-        <Label x:Name="BillTopSirloinSpecialRequest_Copy" Content="Custom request:" FontSize="17" FontWeight="Regular" Canvas.Top="204" Canvas.Left="105"/>
-        <Label x:Name="BillTopSirloinSpecialRequest_Copy1" Content="Please add horseradish." FontSize="17" FontWeight="Regular" Canvas.Top="237" Canvas.Left="153"/>
-        <Label x:Name="BillTopSirloinName_Copy" Content="Total: $39.00" FontSize="20" FontWeight="Regular" Canvas.Top="526" Canvas.Left="792"/>
-        <Button x:Name="requestBill" Content="Request Bill" Canvas.Left="522" Canvas.Top="529" Width="255" Height="38" Background="White" Click="requestBill_Click" FontSize="20"/>
+             mc:Ignorable="d" Height="596.12" Width="1012.836">
+    <Canvas HorizontalAlignment="Left" Height="596" VerticalAlignment="Top" Width="1012">
+        <Label x:Name="YourBill" Content="Your Bills" Canvas.Left="10" FontSize="32" FontWeight="Bold" Canvas.Top="10"/>
+        <Button x:Name="requestBill" Content="Request Bill(s)" Canvas.Left="727" Canvas.Top="529" Width="255" Height="38" Background="White" Click="requestBill_Click" FontSize="20"/>
+        <Button x:Name="splitButton" Content="Split the Bill" Canvas.Left="25" Canvas.Top="529" Width="255" Height="38" Background="White" FontSize="20" Click="splitButton_Click"/>
+        <ScrollViewer Height="457" Width="992" Canvas.Left="10" Canvas.Top="67" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="billsPanel" Orientation="Horizontal"/>
+
+        </ScrollViewer>
 
     </Canvas>
 </UserControl>
