@@ -88,6 +88,7 @@ namespace horizontal
 
             (this.Parent as Panel).Children.Add(dinnerPage);
             (this.Parent as Panel).Children.Remove(this);
+            confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
         }
     }
 }
