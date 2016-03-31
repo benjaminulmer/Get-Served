@@ -20,9 +20,13 @@ namespace horizontal
     /// </summary>
     public partial class Order : UserControl
     {
+        public static Boolean orderPending = true;
+
+        OrderDialog orderDialog;
+
         public Order()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         public void addToOrder(OrderInfo newOrder)
@@ -34,9 +38,32 @@ namespace horizontal
         {
             foreach (OrderInfo item in orderStackPanel.Children)
             {
-                //do a thing
+
+                item.orderGrid.Background = Brushes.LightGray;
+                item.xbutton.Visibility = Visibility.Hidden;
+                item.sentLabel.Visibility = Visibility.Visible;
+                //item.name.Content = "SENT   " + item.name.Content;
+
+
             }
-            orderStackPanel.Children.Clear();
+            //orderStackPanel.Children.Clear();
+            orderPending = false;
+
+        }
+
+        private void billOptionsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void finishDiningButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (orderPending == true)
+            {
+                Console.WriteLine("YOU HAVE ITEMS NOT SENT");
+                Console.ReadLine();
+                
+            }
         }
     }
 }
