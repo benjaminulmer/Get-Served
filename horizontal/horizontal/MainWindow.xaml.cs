@@ -25,17 +25,22 @@ namespace horizontal
         Assistance assistance = new Assistance();
         Bill bill = new Bill();
         private List<OrderInfo> ordersList;
-        private List<NameEnter> names;
+        public List<String> names;
 
         public MainWindow()
         {
             InitializeComponent();
-            mainStackPanel.Children.Add(menu);
+            //mainStackPanel.Children.Add(menu);
             ordersList = new List<OrderInfo>();
-            names = new List<NameEnter>();
+            names = new List<String>();
 
             menuButton.Background = Brushes.LightGray;
             menuButton.FontWeight = FontWeights.Bold;
+            
+            menuButton.IsEnabled = false;
+            orderButton.IsEnabled = false;
+            assistanceButton.IsEnabled = false;
+            billButton.IsEnabled = false;
         }
 
         public void addToOrder(OrderInfo newOrder)
@@ -126,8 +131,13 @@ namespace horizontal
             introCanvas.Visibility = System.Windows.Visibility.Hidden;
             foreach (NameEnter name in peopleStackPanel.Children)
             {
-                names.Add(name);
+                names.Add(name.personName.Text);
             }
+            mainStackPanel.Children.Add(menu);
+            menuButton.IsEnabled = true;
+            orderButton.IsEnabled = true;
+            assistanceButton.IsEnabled = true;
+            billButton.IsEnabled = true;
         }
     }
 }
