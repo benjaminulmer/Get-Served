@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="horizontal.BillItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="104" Width="259">
+    <Canvas Margin="0,0,47,256">
+        <Label x:Name="itemLabel" Content="Item" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="priceLabel" Content="$" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="199,10,0,0" FontSize="14"/>
+        <Label x:Name="modsPriceLabel" Content="Mod $" Canvas.Left="199" Canvas.Top="62"/>
+        <TextBlock x:Name ="modsLabel" TextWrapping="Wrap" Canvas.Left="31" Canvas.Top="67" Height="43" Width="135"><Run Text="Mods"/></TextBlock>
+        <Label x:Name="userLabel" Content="User" Canvas.Left="31" Canvas.Top="36"/>
+        <Expander Header="Expander" Canvas.Left="-121" Canvas.Top="62">
+            <Grid Background="#FFE5E5E5"/>
+        </Expander>
+    </Canvas>
+</UserControl>
