@@ -25,15 +25,22 @@ namespace horizontal
         Assistance assistance = new Assistance();
         Bill bill = new Bill();
         private List<OrderInfo> ordersList;
+        public List<String> names;
 
         public MainWindow()
         {
             InitializeComponent();
-            mainStackPanel.Children.Add(menu);
+            //mainStackPanel.Children.Add(menu);
             ordersList = new List<OrderInfo>();
+            names = new List<String>();
 
             menuButton.Background = Brushes.LightGray;
             menuButton.FontWeight = FontWeights.Bold;
+            
+            menuButton.IsEnabled = false;
+            orderButton.IsEnabled = false;
+            assistanceButton.IsEnabled = false;
+            billButton.IsEnabled = false;
         }
 
         public void addToOrder(OrderInfo newOrder)
@@ -104,6 +111,33 @@ namespace horizontal
             orderButton.FontWeight = FontWeights.Regular;
             assistanceButton.FontWeight = FontWeights.Bold;
             billButton.FontWeight = FontWeights.Regular;
+        }
+
+        private void numPeopleSelected(object sender, SelectionChangedEventArgs e)
+        {
+            int numPeople = numPeopleSelector.SelectedIndex + 1;
+            peopleStackPanel.Children.Clear();
+            for (int i = 0; i < numPeople; i++)
+            {
+                NameEnter nameEnter = new NameEnter();
+                nameEnter.personNum.Content = "Person " + (i + 1);
+                nameEnter.personName.Text = "Person " + (i + 1);
+                peopleStackPanel.Children.Add(nameEnter);
+            }
+        }
+
+        private void confirmNumPeople_Click(object sender, RoutedEventArgs e)
+        {
+            introCanvas.Visibility = System.Windows.Visibility.Hidden;
+            foreach (NameEnter name in peopleStackPanel.Children)
+            {
+                names.Add(name.personName.Text);
+            }
+            mainStackPanel.Children.Add(menu);
+            menuButton.IsEnabled = true;
+            orderButton.IsEnabled = true;
+            assistanceButton.IsEnabled = true;
+            billButton.IsEnabled = true;
         }
     }
 }

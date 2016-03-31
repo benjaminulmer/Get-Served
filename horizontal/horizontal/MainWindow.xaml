@@ -1,13 +1,14 @@
-﻿<Window x:Class="horizontal.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="horizontal.MainWindow"
         Title="MainWindow" Height="700" Width="1200" ResizeMode="NoResize" Background="White">
     <Canvas HorizontalAlignment="Left" Margin="0,0,-6,-29" VerticalAlignment="Top" Width="1200" Height="700" >
         <StackPanel x:Name="mainStackPanel" HorizontalAlignment="Left" Height="594" VerticalAlignment="Top" Width="1012" Canvas.Left="179" Canvas.Top="66"/>
         <Button x:Name="menuButton" Content="Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Click="menuButton_Click" Height="75" FontSize="24" Background="White" Canvas.Left="10" Canvas.Top="66"/>
         <Button x:Name="billButton" Content="Manage Bill" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" RenderTransformOrigin="-0.392,0.05" Click="billButton_Click" Height="75" FontSize="24" Background="White" Canvas.Left="11" Canvas.Top="579"/>
         <Button x:Name="assistanceButton" Content="Assistance" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Height="75" FontSize="24" Background="White" Click="assistanceButton_Click" Canvas.Left="11" Canvas.Top="226"/>
-        <Button x:Name="orderButton" Content="View Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Height="76" FontSize="24" Background="White" Click="orderButton_Click" Canvas.Left="11" Canvas.Top="145"/>
+        <Button x:Name="orderButton" Content="Pending&#xD;&#xA; Orders" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Height="76" FontSize="24" Background="White" Click="orderButton_Click" Canvas.Left="11" Canvas.Top="145"/>
         <Label Content="Restaurant Name Goes Here" Canvas.Left="10" Width="581" FontSize="36"/>
         <Label Content="Get Served Menu System" Canvas.Left="1006" Width="184" FontSize="14"/>
         <Separator Height="50" Canvas.Left="-114" Margin="0" Canvas.Top="336" Width="586" RenderTransformOrigin="0.5,0.5">
@@ -23,5 +24,21 @@
         <Border BorderBrush="Black" BorderThickness="1" Height="236" Canvas.Left="11" Canvas.Top="322" Width="163">
             <TextBlock TextWrapping="Wrap" Text="Restaurant Custom Image/Logo/Advertisement/Promotion goes here" Margin="9" FontSize="14"/>
         </Border>
+        <Canvas x:Name="introCanvas" Height="492" Canvas.Left="234" Canvas.Top="100" Width="882" Background="White">
+            <StackPanel x:Name="peopleStackPanel" Height="338" Canvas.Left="10" Canvas.Top="69" Width="862">
+                <StackPanel Height="100"/>
+            </StackPanel>
+            <Button x:Name="confirmNumPeople" Content="Confirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Height="75" FontSize="24" Background="White" Canvas.Left="704" Canvas.Top="407" Click="confirmNumPeople_Click"/>
+            <Label Content="How many people are dining?" Canvas.Left="10" Canvas.Top="10" Height="59" Width="332" FontSize="24"/>
+            <ComboBox x:Name="numPeopleSelector" Canvas.Left="345" Canvas.Top="18" Width="148" SelectedIndex="0" SelectionChanged="numPeopleSelected" Height="31" FontSize="16">
+                <Label Content="1"/>
+                <Label Content="2"/>
+                <Label Content="3"/>
+                <Label Content="4"/>
+                <Label Content="5"/>
+                <Label Content="6"/>
+            </ComboBox>
+        </Canvas>
+
     </Canvas>
 </Window>
