@@ -25,12 +25,14 @@ namespace horizontal
         Assistance assistance = new Assistance();
         Bill bill = new Bill();
         private List<OrderInfo> ordersList;
+        private List<NameEnter> names;
 
         public MainWindow()
         {
             InitializeComponent();
             mainStackPanel.Children.Add(menu);
             ordersList = new List<OrderInfo>();
+            names = new List<NameEnter>();
 
             menuButton.Background = Brushes.LightGray;
             menuButton.FontWeight = FontWeights.Bold;
@@ -112,9 +114,19 @@ namespace horizontal
             peopleStackPanel.Children.Clear();
             for (int i = 0; i < numPeople; i++)
             {
-                Label label = new Label();
-                label.Content = "test";
-                peopleStackPanel.Children.Add(label);
+                NameEnter nameEnter = new NameEnter();
+                nameEnter.personNum.Content = "Person " + (i + 1);
+                nameEnter.personName.Text = "Person " + (i + 1);
+                peopleStackPanel.Children.Add(nameEnter);
+            }
+        }
+
+        private void confirmNumPeople_Click(object sender, RoutedEventArgs e)
+        {
+            introCanvas.Visibility = System.Windows.Visibility.Hidden;
+            foreach (NameEnter name in peopleStackPanel.Children)
+            {
+                names.Add(name);
             }
         }
     }
