@@ -36,6 +36,11 @@ namespace horizontal
 
             menuButton.Background = Brushes.LightGray;
             menuButton.FontWeight = FontWeights.Bold;
+            
+            menuButton.IsEnabled = false;
+            orderButton.IsEnabled = false;
+            assistanceButton.IsEnabled = false;
+            billButton.IsEnabled = false;
         }
 
         public void addToOrder(OrderInfo newOrder)
@@ -129,6 +134,10 @@ namespace horizontal
                 names.Add(name.personName.Text);
             }
             mainStackPanel.Children.Add(menu);
+            menuButton.IsEnabled = true;
+            orderButton.IsEnabled = true;
+            assistanceButton.IsEnabled = true;
+            billButton.IsEnabled = true;
         }
     }
 }

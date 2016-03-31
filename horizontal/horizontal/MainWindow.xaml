@@ -24,13 +24,13 @@
         <Border BorderBrush="Black" BorderThickness="1" Height="236" Canvas.Left="11" Canvas.Top="322" Width="163">
             <TextBlock TextWrapping="Wrap" Text="Restaurant Custom Image/Logo/Advertisement/Promotion goes here" Margin="9" FontSize="14"/>
         </Border>
-        <Canvas x:Name="introCanvas" Height="492" Canvas.Left="230" Canvas.Top="125" Width="882" Background="#FFBDFFFC">
+        <Canvas x:Name="introCanvas" Height="492" Canvas.Left="234" Canvas.Top="100" Width="882" Background="#FFBDFFFC">
             <StackPanel x:Name="peopleStackPanel" Height="338" Canvas.Left="10" Canvas.Top="69" Width="862">
                 <StackPanel Height="100"/>
             </StackPanel>
             <Button x:Name="confirmNumPeople" Content="Confirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Height="75" FontSize="24" Background="White" Canvas.Left="704" Canvas.Top="407" Click="confirmNumPeople_Click"/>
             <Label Content="How many people are dining?" Canvas.Left="10" Canvas.Top="10" Height="59" Width="332" FontSize="24"/>
-            <ComboBox x:Name="numPeopleSelector" Canvas.Left="347" Canvas.Top="25" Width="142" SelectedIndex="0" SelectionChanged="numPeopleSelected" Height="24" FontSize="14">
+            <ComboBox x:Name="numPeopleSelector" Canvas.Left="345" Canvas.Top="18" Width="148" SelectedIndex="0" SelectionChanged="numPeopleSelected" Height="31" FontSize="16">
                 <Label Content="1"/>
                 <Label Content="2"/>
                 <Label Content="3"/>
