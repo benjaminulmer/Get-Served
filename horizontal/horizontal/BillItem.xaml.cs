@@ -20,40 +20,65 @@ namespace horizontal
     /// </summary>
     public partial class BillItem : UserControl
     {
-        String item;
-        public String user;
-        String price;
-        String mods;
-        String modsPrice;
+        public String item;
+        public List<String> users;
+        public String price;
+        public String mods;
+        public String modsPrice;
 
-        public BillItem(String item, String user, String price)
+        public BillItem(String item, List<String> users, String price)
         {
             InitializeComponent();
             this.item = item;
-            this.user = user;
+            this.users = users;
             this.price = price;
             this.mods = "";
             this.modsPrice = "";
 
+            String userLabelString;
+            if (users.Count == 0) { userLabelString = ""; }
+            else { userLabelString = "For: "; }
+            
+            for (int i = 0; i < users.Count; i++)
+            {
+                userLabelString = userLabelString + users[i];
+                if (i < users.Count - 1) { 
+                    userLabelString = userLabelString + ", ";
+                }
+            }
+
             itemLabel.Content = item;
             priceLabel.Content = price;
-            userLabel.Content = user;
+            userLabel.Content = userLabelString;
             modsLabel.Text = "";
             modsPriceLabel.Content = "";
         }
 
-        public BillItem(String item, String user, String price, String mods, String modsPrice)
+        public BillItem(String item, List<String> users, String price, String mods, String modsPrice)
         {
             InitializeComponent();
             this.item = item;
-            this.user = user;
+            this.users = users;
             this.price = price;
             this.mods = mods;
             this.modsPrice = modsPrice;
 
+            String userLabelString;
+            if (users.Count == 0) { userLabelString = ""; }
+            else { userLabelString = "For: "; }
+
+            for (int i = 0; i < users.Count; i++)
+            {
+                userLabelString = userLabelString + users[i];
+                if (i < users.Count - 1)
+                {
+                    userLabelString = userLabelString + ", ";
+                }
+            }
+
             itemLabel.Content = item;
             priceLabel.Content = price;
-            userLabel.Content = user;
+            userLabel.Content = userLabelString;
             modsLabel.Text = mods;
             modsPriceLabel.Content = modsPrice;
         }

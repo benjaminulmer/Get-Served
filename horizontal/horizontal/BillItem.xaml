@@ -10,5 +10,8 @@
         <Label x:Name="modsPriceLabel" Content="Mod $" Canvas.Left="199" Canvas.Top="62"/>
         <TextBlock x:Name ="modsLabel" TextWrapping="Wrap" Canvas.Left="31" Canvas.Top="67" Height="43" Width="135"><Run Text="Mods"/></TextBlock>
         <Label x:Name="userLabel" Content="User" Canvas.Left="31" Canvas.Top="36"/>
+        <Expander Header="Expander" Canvas.Left="-121" Canvas.Top="62">
+            <Grid Background="#FFE5E5E5"/>
+        </Expander>
     </Canvas>
 </UserControl>
