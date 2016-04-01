@@ -31,6 +31,7 @@ namespace horizontal
 
         public void addToOrder(OrderInfo newOrder)
         {
+            orderPending = true;
             orderStackPanel.Children.Add(newOrder);
         }
 
@@ -42,6 +43,7 @@ namespace horizontal
                 item.orderGrid.Background = Brushes.LightGray;
                 item.xbutton.Visibility = Visibility.Hidden;
                 item.sentLabel.Visibility = Visibility.Visible;
+                item.individualOrderButton.Visibility = Visibility.Hidden;
                 //item.name.Content = "SENT   " + item.name.Content;
 
 
@@ -62,7 +64,10 @@ namespace horizontal
             {
                 Console.WriteLine("YOU HAVE ITEMS NOT SENT");
                 Console.ReadLine();
-                
+            }
+            else {
+                Global.mainStackPanel.Children.Clear();
+                Global.mainStackPanel.Children.Add(Global.bill);
             }
         }
     }

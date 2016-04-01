@@ -67,6 +67,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BillInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BillItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dessert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,6 +124,12 @@
     <Compile Include="Bill.xaml.cs">
       <DependentUpon>Bill.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BillInfo.xaml.cs">
+      <DependentUpon>BillInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BillItem.xaml.cs">
+      <DependentUpon>BillItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dessert.xaml.cs">
       <DependentUpon>Dessert.xaml</DependentUpon>
     </Compile>
@@ -148,6 +162,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NameChoose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NameEnter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Order.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -164,6 +186,12 @@
   <ItemGroup>
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NameChoose.xaml.cs">
+      <DependentUpon>NameChoose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NameEnter.xaml.cs">
+      <DependentUpon>NameEnter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
