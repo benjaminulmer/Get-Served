@@ -71,6 +71,8 @@ namespace horizontal
             newOrder.item = "Top 10oz Sirloin Steak";
             newOrder.price = 35;
             newOrder.mods.Add(cooked);
+            newOrder.modsPrice.Add(0);
+
             if (shrimpCB.IsChecked == true)
             {
                 newOrder.mods.Add("Add shrimp");

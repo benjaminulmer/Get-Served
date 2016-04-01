@@ -65,7 +65,7 @@ namespace horizontal
         {
             OrderInformation newOrder = new OrderInformation();
             newOrder.item = "Caesar Salad";
-            newOrder.price = 35;
+            newOrder.price = 15;
             if (shrimpCB.IsChecked == true)
             {
                 newOrder.mods.Add("Add shrimp");

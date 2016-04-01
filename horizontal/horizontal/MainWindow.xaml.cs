@@ -148,6 +148,8 @@ namespace horizontal
             orderButton.IsEnabled = true;
             assistanceButton.IsEnabled = true;
             billButton.IsEnabled = true;
+
+            Global.bill.addUsers();
         }
     }
 }

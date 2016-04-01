@@ -80,6 +80,7 @@ namespace horizontal
             foreach (OrderInformation item in Global.ordersList)
             {
                 Global.confirmedList.Add(item);
+                Global.bill.addItem(item);
             }
             Global.ordersList.Clear();
             orderPending = false;

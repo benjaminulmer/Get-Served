@@ -65,7 +65,7 @@ namespace horizontal
         {
             OrderInformation newOrder = new OrderInformation();
             newOrder.item = "Oven Baked Salmon";
-            newOrder.price = 35;
+            newOrder.price = 25;
             if (vegiCB.IsChecked == true)
             {
                 newOrder.mods.Add("Extra vegetables");

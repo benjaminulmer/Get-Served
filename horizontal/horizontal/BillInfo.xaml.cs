@@ -55,8 +55,11 @@ namespace horizontal
 
             foreach (BillItem item in items)
             {
-                total = total + item.price;
-                total = total + item.modsPrice;
+                total = total + item.order.price;
+                for (int i = 0; i < item.order.modsPrice.Count; i++)
+                {
+                    total = total + item.order.modsPrice[i];
+                }
             }
 
             String totalString = "$" + total.ToString("0.00");
