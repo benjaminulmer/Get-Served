@@ -21,10 +21,12 @@ namespace horizontal
     public partial class Order : UserControl
     {
         public static Boolean orderPending = true;
+        public float total;
 
         public Order()
         {
             InitializeComponent();
+            total = 0;
         }
 
         public void addToOrder(OrderInformation newOrder)
@@ -32,6 +34,7 @@ namespace horizontal
             orderPending = true;
             OrderInfo orderInfo = new OrderInfo();
             orderInfo.name.Content = newOrder.item;
+            total += newOrder.price;
             orderInfo.price.Content = "$" + newOrder.price.ToString("0.00");
             foreach (String desc in newOrder.mods)
             {
@@ -42,6 +45,7 @@ namespace horizontal
             foreach (float price in newOrder.modsPrice)
             {
                 Label label = new Label();
+                total += price;
                 label.Content = "$" + price.ToString("0.00");
                 label.HorizontalContentAlignment = System.Windows.HorizontalAlignment.Right;
                 orderInfo.subPriceStackPanel.Children.Add(label);
@@ -59,7 +63,7 @@ namespace horizontal
                 }
                 count++;
             }
-
+            totalLabel.Content = "Total: $" + total.ToString("0.00");
             orderStackPanel.Children.Add(orderInfo);
         }
 
