@@ -33,6 +33,7 @@ namespace horizontal
         {
             orderPending = true;
             OrderInfo orderInfo = new OrderInfo();
+            orderInfo.orderInfo = newOrder;
             orderInfo.name.Content = newOrder.item;
             total += newOrder.price;
             orderInfo.price.Content = "$" + newOrder.price.ToString("0.00");

@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Width="831" Height="48">
+             mc:Ignorable="d" Width="831" Height="45">
     <Canvas Margin="0,0,0,10">
-        <Label x:Name="personNum" Content="Label" Canvas.Left="10" FontSize="24"/>
-        <TextBox x:Name="personName" Height="38" Canvas.Left="128" TextWrapping="Wrap" Text="TextBox" Canvas.Top="4" Width="201" FontSize="24"/>
+        <Label x:Name="personNum" Content="Label" Canvas.Left="10" FontSize="20"/>
+        <TextBox x:Name="personName" Height="38" Canvas.Left="128" TextWrapping="Wrap" Text="TextBox" Canvas.Top="4" Width="201" FontSize="20"/>
 
     </Canvas>
 </UserControl>

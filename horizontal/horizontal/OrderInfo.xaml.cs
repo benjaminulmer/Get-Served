@@ -21,6 +21,8 @@ namespace horizontal
     public partial class OrderInfo : UserControl
     {
         private string orderName;
+        public OrderInformation orderInfo;
+
         public string OrderName
         {
             get { return orderName; }
@@ -51,6 +53,18 @@ namespace horizontal
         private void deleteClick(object sender, MouseButtonEventArgs e)
         {
             (this.Parent as Panel).Children.Remove(this);
+        }
+
+        private void individualOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            orderGrid.Background = Brushes.LightGray;
+            xbutton.Visibility = Visibility.Hidden;
+            sentLabel.Visibility = Visibility.Visible;
+            individualOrderButton.Visibility = Visibility.Hidden;
+
+            Global.order.total -= orderInfo.price;
+            Global.ordersList.Remove(orderInfo);
+            Global.confirmedList.Add(orderInfo);
         }
     }
 }
