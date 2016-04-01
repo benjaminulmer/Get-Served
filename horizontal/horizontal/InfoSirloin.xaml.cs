@@ -24,11 +24,12 @@ namespace horizontal
     public partial class InfoSirloin : UserControl
     {
         Dinner dinnerPage;
-
+        String cooked;
         public InfoSirloin(Dinner dinnerPage)
         {
             InitializeComponent();
             this.dinnerPage = dinnerPage;
+            this.cooked = "Medium Rare";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -69,6 +70,7 @@ namespace horizontal
             OrderInformation newOrder = new OrderInformation();
             newOrder.item = "Top 10oz Sirloin Steak";
             newOrder.price = 35;
+            newOrder.mods.Add(cooked);
             if (shrimpCB.IsChecked == true)
             {
                 newOrder.mods.Add("Add shrimp");
@@ -111,6 +113,31 @@ namespace horizontal
             (this.Parent as Panel).Children.Add(dinnerPage);
             (this.Parent as Panel).Children.Remove(this);
             confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            cooked = "Rare";
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            cooked = "Medium Rare";
+        }
+
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            cooked = "Medium";
+        }
+
+        private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
+        {
+            cooked = "Medium Well";
+        }
+
+        private void RadioButton_Checked_4(object sender, RoutedEventArgs e)
+        {
+            cooked = "Well Done";
         }
     }
 }
