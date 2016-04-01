@@ -45,6 +45,7 @@ namespace horizontal
         public OrderInfo()
         {
             InitializeComponent();
+            
         }
 
         private void deleteClick(object sender, MouseButtonEventArgs e)

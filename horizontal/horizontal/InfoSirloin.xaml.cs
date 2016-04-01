@@ -42,14 +42,22 @@ namespace horizontal
             var mainWindow = VisualTreeHelper.GetParent(this);
             while (!(mainWindow is MainWindow)) { mainWindow = VisualTreeHelper.GetParent(mainWindow); }
 
-            OrderInfo newOrder = new OrderInfo();
-            newOrder.OrderName = "Sirloin Steak";
-            newOrder.PriceValue = "$35.00";
+            //OrderInfo newOrder = new OrderInfo();
+            //newOrder.OrderName = "Sirloin Steak";
+            //newOrder.PriceValue = "$35.00";
             
-            (mainWindow as MainWindow).addToOrder(newOrder);
+            //(mainWindow as MainWindow).addToOrder(newOrder);
 
-            (this.Parent as Panel).Children.Add(dinnerPage);
-            (this.Parent as Panel).Children.Remove(this);
+            //(this.Parent as Panel).Children.Add(dinnerPage);
+            //(this.Parent as Panel).Children.Remove(this);
+            confrimCanvas.Visibility = System.Windows.Visibility.Visible;
+            peopleStackPanel.Children.Clear();
+            foreach (String name in Global.names)
+            {
+                NameChoose nameChoose = new NameChoose();
+                nameChoose.nameCB.Content = name;
+                peopleStackPanel.Children.Add(nameChoose);
+            }
         }
 
         private void nutritionButton_Click(object sender, RoutedEventArgs e)
@@ -60,6 +68,27 @@ namespace horizontal
         private void ButtonPopup_Click(object sender, RoutedEventArgs e)
         {
             nutritionPopup.IsOpen = false;
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void confirmButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = VisualTreeHelper.GetParent(this);
+            while (!(mainWindow is MainWindow)) { mainWindow = VisualTreeHelper.GetParent(mainWindow); }
+
+            OrderInfo newOrder = new OrderInfo();
+            newOrder.OrderName = "Sirloin Steak";
+            newOrder.PriceValue = "$35.00";
+
+            (mainWindow as MainWindow).addToOrder(newOrder);
+
+            (this.Parent as Panel).Children.Add(dinnerPage);
+            (this.Parent as Panel).Children.Remove(this);
+            confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
         }
     }
 }

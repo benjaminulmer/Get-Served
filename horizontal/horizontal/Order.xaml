@@ -7,12 +7,14 @@
              d:DesignHeight="300" d:DesignWidth="300" Width="1012" Height="594">
     <Canvas>
         <ScrollViewer Height="416" Width="1002" Canvas.Top="99">
-            <StackPanel x:Name="orderStackPanel"/>
+            <StackPanel x:Name="orderStackPanel" Height="417" VerticalAlignment="Bottom"/>
         </ScrollViewer>
+
         <Label Content="Finalize Order" Canvas.Left="50" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
         <Label Content="Item" Canvas.Left="50" Canvas.Top="57" FontSize="20"/>
         <Label Content="Price" Canvas.Left="847" Canvas.Top="60" FontSize="20" Width="99" HorizontalContentAlignment="Right"/>
         <Label Content="Total: Some math $" Canvas.Left="742" Canvas.Top="526" FontSize="20" Width="204" HorizontalContentAlignment="Right"/>
-        <Button x:Name="orderButton" Content="Order Items" Canvas.Left="588" Canvas.Top="520" Width="178" Height="49" Background="#FFAFE4B1" FontSize="20" Click="orderButton_Click"/>
+        <Button x:Name="orderButton" Content="Send Pending Items" Canvas.Left="571" Canvas.Top="520" Width="195" Height="49" Background="#FFAFE4B1" FontSize="20" Click="orderButton_Click"/>
+        <Button x:Name="finishDiningButton" Content="View Bill" Canvas.Left="318" Canvas.Top="520" Width="195" Height="49" Background="#FFAFE4B1" FontSize="20" Click="finishDiningButton_Click"/>
     </Canvas>
 </UserControl>
