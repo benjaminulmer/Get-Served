@@ -27,6 +27,7 @@ namespace horizontal
         {
             InitializeComponent();
             total = 0;
+            finishDiningButton.IsEnabled = false;
         }
 
         public void addToOrder(OrderInformation newOrder)
@@ -66,6 +67,9 @@ namespace horizontal
             }
             totalLabel.Content = "Total: $" + total.ToString("0.00");
             orderStackPanel.Children.Add(orderInfo);
+
+            finishDiningButton.IsEnabled = false;
+            billLabel.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void orderButton_Click(object sender, RoutedEventArgs e)
@@ -84,24 +88,19 @@ namespace horizontal
             }
             Global.ordersList.Clear();
             orderPending = false;
-        }
-
-        private void billOptionsButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            setFinished();
         }
 
         private void finishDiningButton_Click(object sender, RoutedEventArgs e)
         {
-            if (orderPending == true)
-            {
-                Console.WriteLine("YOU HAVE ITEMS NOT SENT");
-                Console.ReadLine();
-            }
-            else {
-                Global.mainStackPanel.Children.Clear();
-                Global.mainStackPanel.Children.Add(Global.bill);
-            }
+            Global.mainStackPanel.Children.Clear();
+            Global.mainStackPanel.Children.Add(Global.bill);
+        }
+
+        public void setFinished()
+        {
+            finishDiningButton.IsEnabled = true;
+            billLabel.Visibility = System.Windows.Visibility.Hidden;
         }
     }
 }

@@ -45,9 +45,10 @@
         <Canvas x:Name="confrimCanvas" Height="350" Canvas.Left="570" Canvas.Top="354" Width="399" Background="White" Visibility="Hidden">
             <Rectangle Fill="White" Height="350" Stroke="Black" Width="399"/>
             <Label Content="Who is this item for?&#xA;(Select more than one person to share item)" Canvas.Left="10" Canvas.Top="10" FontSize="18"/>
-            <StackPanel x:Name="peopleStackPanel" Height="208" Canvas.Left="10" Canvas.Top="73" Width="379"/>
+            <StackPanel x:Name="peopleStackPanel" Height="182" Canvas.Left="10" Canvas.Top="73" Width="379"/>
             <Button x:Name="cancelButton" Content="Cancel" Canvas.Left="10" Canvas.Top="286" Width="150" Height="50" FontSize="20" Click="cancelButton_Click"/>
             <Button x:Name="confirmButton" Content="Confirm" Canvas.Left="239" Canvas.Top="286" Width="150" Height="50" FontSize="20" Click="confirmButton_Click"/>
+            <Label x:Name="errorLabel" Content="Please choose at least one person." Visibility="Hidden" Canvas.Left="198" Canvas.Top="255" Width="191" Foreground="#FFF43030"/>
         </Canvas>
     </Canvas>
 </UserControl>

@@ -93,9 +93,11 @@ namespace horizontal
             splitItem.users = new List<String>() { };
             splitItem.price = (item.order.price / numPeople);
             splitItem.mods = item.order.mods;
+            splitItem.modsPrice = item.order.modsPrice; 
+
             for (int i = 0; i < item.order.modsPrice.Count; i++)
             {
-                splitItem.modsPrice[i] = (item.order.modsPrice[i] / numPeople);
+                splitItem.modsPrice[i] = (splitItem.modsPrice[i] / numPeople);
             }
 
             foreach (BillInfo bill in profileBills)

@@ -63,51 +63,66 @@ namespace horizontal
 
         private void confirmButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderInformation newOrder = new OrderInformation();
-            newOrder.item = "Caesar Salad";
-            newOrder.price = 15;
-            if (shrimpCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Add shrimp");
-                newOrder.modsPrice.Add(5);
-            }
-            if (chickenCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Add chicken");
-                newOrder.modsPrice.Add(5);
-            }
-            if (salmonCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Add salmon");
-                newOrder.modsPrice.Add(5);
-            }
-            if (glutenCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Gluten-free");
-                newOrder.modsPrice.Add(0);
-            }
-            if (dressingCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Light Dressing");
-                newOrder.modsPrice.Add(0);
-            }
-            if (cheeseCB.IsChecked == true)
-            {
-                newOrder.mods.Add("No cheese");
-                newOrder.modsPrice.Add(0);
-            }
+            int checkedCount = 0;
             foreach (NameChoose name in peopleStackPanel.Children)
             {
                 if (name.nameCB.IsChecked == true)
                 {
-                    newOrder.users.Add(name.nameCB.Content.ToString());
+                    checkedCount++;
                 }
             }
-            Global.addToOrder(newOrder);
+            if (checkedCount == 0)
+            {
+                errorLabel.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                OrderInformation newOrder = new OrderInformation();
+                newOrder.item = "Caesar Salad";
+                newOrder.price = 15;
+                if (shrimpCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Add shrimp");
+                    newOrder.modsPrice.Add(5);
+                }
+                if (chickenCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Add chicken");
+                    newOrder.modsPrice.Add(5);
+                }
+                if (salmonCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Add salmon");
+                    newOrder.modsPrice.Add(5);
+                }
+                if (glutenCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Gluten-free");
+                    newOrder.modsPrice.Add(0);
+                }
+                if (dressingCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Light Dressing");
+                    newOrder.modsPrice.Add(0);
+                }
+                if (cheeseCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("No cheese");
+                    newOrder.modsPrice.Add(0);
+                }
+                foreach (NameChoose name in peopleStackPanel.Children)
+                {
+                    if (name.nameCB.IsChecked == true)
+                    {
+                        newOrder.users.Add(name.nameCB.Content.ToString());
+                    }
+                }
+                Global.addToOrder(newOrder);
 
-            (this.Parent as Panel).Children.Add(dinnerPage);
-            (this.Parent as Panel).Children.Remove(this);
-            confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
+                (this.Parent as Panel).Children.Add(dinnerPage);
+                (this.Parent as Panel).Children.Remove(this);
+                confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
     }
 }
