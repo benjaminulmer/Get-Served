@@ -20,42 +20,29 @@ namespace horizontal
     /// </summary>
     public partial class Bill : UserControl
     {
-        List<BillItem> orders;
+        //List<BillItem> orders;
         BillInfo combinedBill;
         bool isSplit;
-        List<String> profiles;
+        //List<String> profiles;
         List<BillInfo> profileBills;
 
         public Bill()
         {
             InitializeComponent();
 
-            profiles = new List<String>();
-            profiles.Add("Mia");
-            profiles.Add("Ryan");
-            profiles.Add("Leo");
-
-            orders = new List<BillItem>();
-            orders.Add(new BillItem("Roast Chicken", new List<String>() { "Mia", "Leo" }, 25.00F, "Subsititute sweet potato fries", 3.00F));
-            orders.Add(new BillItem("Steak", new List<String>() { "Ryan" }, 30.00F));
-            orders.Add(new BillItem("Dessert", new List<String>() { "Mia", "Ryan" }, 10.00F, "No whipped cream", 0.00F));
-
             combinedBill = new BillInfo("combined");
-            foreach (BillItem item in orders)
-            {
-                combinedBill.addItem(item);
-            }
-            combinedBill.setPrice();
-            billsPanel.Children.Add(combinedBill);
-
             profileBills = new List<BillInfo>();
-            foreach (String name in profiles)
-            {
-                profileBills.Add(new BillInfo(name));
-            }
-
             isSplit = false;
-            splitBill();
+        }
+
+        public void addUsers()
+        {
+            for (int i = 0; i < Global.names.Count; i++ )
+            {
+                profileBills.Add(new BillInfo(Global.names[i]));
+                profileBills[i].setName(Global.names[i]);
+            }
+            billsPanel.Children.Add(combinedBill);
         }
 
         private void requestBill_Click(object sender, RoutedEventArgs e)
@@ -85,7 +72,6 @@ namespace horizontal
             {
                 splitButton.Content = "Combine Bills";
                 requestBill.Content = "Request All Bills";
-                //splitBill();
                 foreach (BillInfo bill in profileBills)
                 {
                     billsPanel.Children.Add(bill);
@@ -95,37 +81,31 @@ namespace horizontal
             isSplit = !isSplit;
         }
 
-        private void splitBill() 
-        {
-            for (int i = 0; i < profiles.Count; i++)
-            {
-                String profile = profiles[i];
-
-                foreach (BillItem item in combinedBill.items) {
-                    if ((item.users.Count == 1) && (item.users[0] == profile)) {
-                        profileBills[i].addItem(new BillItem(item.item, new List<String>() {}, item.price, item.mods, item.modsPrice));
-                    }
-                    else if (item.users[0] == profile)
-                    {
-                        splitWithMultiple(item);
-                    }
-                    profileBills[i].setPrice();
-                    profileBills[i].setName(profiles[i]);
-                }
-            }
-        }
-
         private void splitWithMultiple(BillItem item)
         {
-            int numPeople = item.users.Count;
+            int numPeople = item.order.users.Count;
             String fractionString = "1/" + numPeople + " ";
-            String nameString = fractionString + item.item;
+            String nameString = fractionString + item.order.item;
+            item.order.item = nameString;
+
+            OrderInformation splitItem = new OrderInformation();
+            splitItem.item = nameString;
+            splitItem.users = new List<String>() { };
+            splitItem.price = (item.order.price / numPeople);
+            splitItem.mods = item.order.mods;
+            splitItem.modsPrice = item.order.modsPrice; 
+
+            for (int i = 0; i < item.order.modsPrice.Count; i++)
+            {
+                splitItem.modsPrice[i] = (splitItem.modsPrice[i] / numPeople);
+            }
 
             foreach (BillInfo bill in profileBills)
             {
-                if (item.users.Contains(bill.user))
+                if (item.order.users.Contains(bill.user))
                 {
-                    bill.addItem(new BillItem(nameString, new List<String>() { }, (item.price / numPeople), item.mods, (item.modsPrice / numPeople)));
+                    bill.addItem(new BillItem(splitItem));
+                    bill.setPrice();
                 }
             }
         }
@@ -136,23 +116,25 @@ namespace horizontal
             billsPanel.Children.Add(combinedBill);
         }
 
-        private void addItem(BillItem item)
+        public void addItem(OrderInformation item)
         {
-            orders.Add(item);
-            combinedBill.addItem(item);
+
+            combinedBill.addItem(new BillItem(item));
             combinedBill.setPrice();
 
-            foreach (BillInfo bill in profileBills)
+            if (item.users.Count == 1) { 
+                foreach (BillInfo bill in profileBills)
+                {
+                    if (bill.user == item.users[0])
+                    {
+                        bill.addItem(new BillItem(item));
+                        bill.setPrice();
+                    }
+                }
+            }
+            else
             {
-                if ((item.users.Count == 1) && (bill.user == item.users[0]))
-                {
-                    bill.addItem(new BillItem(item.item, new List<String>() {}, item.price, item.mods, item.modsPrice));
-                    bill.setPrice();
-                }
-                else
-                {
-                    splitWithMultiple(item);
-                }
+                splitWithMultiple(new BillItem(item));
             }
         }
     }

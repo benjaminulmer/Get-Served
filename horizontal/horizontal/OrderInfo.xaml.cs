@@ -65,6 +65,11 @@ namespace horizontal
             Global.order.total -= orderInfo.price;
             Global.ordersList.Remove(orderInfo);
             Global.confirmedList.Add(orderInfo);
+            Global.bill.addItem(orderInfo);
+            if (Global.ordersList.Count == 0)
+            {
+                Global.order.setFinished();
+            }
         }
     }
 }

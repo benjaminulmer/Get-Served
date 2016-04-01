@@ -67,52 +67,67 @@ namespace horizontal
 
         private void confirmButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderInformation newOrder = new OrderInformation();
-            newOrder.item = "Top 10oz Sirloin Steak";
-            newOrder.price = 35;
-            newOrder.mods.Add(cooked);
-            if (shrimpCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Add shrimp");
-                newOrder.modsPrice.Add(5);
-            }
-            if (pSauceCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Add peppercorn sauce");
-                newOrder.modsPrice.Add(4);
-            }
-            if (cSauceCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Add cajun sauce");
-                newOrder.modsPrice.Add(2);
-            }
-            if (friesCB.IsChecked == true)
-            {
-                newOrder.mods.Add("Sub baked potato for fries");
-                newOrder.modsPrice.Add(0);
-            }
-            if (tomatoesCB.IsChecked == true)
-            {
-                newOrder.mods.Add("No tomatoes");
-                newOrder.modsPrice.Add(0);
-            }
-            if (shrimpCB.IsChecked == true)
-            {
-                newOrder.mods.Add("No mushrooms");
-                newOrder.modsPrice.Add(0);
-            }
+            int checkedCount = 0;
             foreach (NameChoose name in peopleStackPanel.Children)
             {
                 if (name.nameCB.IsChecked == true)
                 {
-                    newOrder.users.Add(name.nameCB.Content.ToString());
+                    checkedCount++;
                 }
             }
-            Global.addToOrder(newOrder);
+            if (checkedCount == 0) {
+                errorLabel.Visibility = System.Windows.Visibility.Visible;
+            }
+            else {
+                OrderInformation newOrder = new OrderInformation();
+                newOrder.item = "Top 10oz Sirloin Steak";
+                newOrder.price = 35;
+                newOrder.mods.Add(cooked);
+                newOrder.modsPrice.Add(0);
 
-            (this.Parent as Panel).Children.Add(dinnerPage);
-            (this.Parent as Panel).Children.Remove(this);
-            confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
+                if (shrimpCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Add shrimp");
+                    newOrder.modsPrice.Add(5);
+                }
+                if (pSauceCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Add peppercorn sauce");
+                    newOrder.modsPrice.Add(4);
+                }
+                if (cSauceCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Add cajun sauce");
+                    newOrder.modsPrice.Add(2);
+                }
+                if (friesCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("Sub baked potato for fries");
+                    newOrder.modsPrice.Add(0);
+                }
+                if (tomatoesCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("No tomatoes");
+                    newOrder.modsPrice.Add(0);
+                }
+                if (shrimpCB.IsChecked == true)
+                {
+                    newOrder.mods.Add("No mushrooms");
+                    newOrder.modsPrice.Add(0);
+                }
+                foreach (NameChoose name in peopleStackPanel.Children)
+                {
+                    if (name.nameCB.IsChecked == true)
+                    {
+                        newOrder.users.Add(name.nameCB.Content.ToString());
+                    }
+                }
+                Global.addToOrder(newOrder);
+
+                (this.Parent as Panel).Children.Add(dinnerPage);
+                (this.Parent as Panel).Children.Remove(this);
+                confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
