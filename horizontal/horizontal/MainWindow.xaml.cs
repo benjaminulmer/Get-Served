@@ -15,37 +15,54 @@ using System.Windows.Shapes;
 
 namespace horizontal
 {
+    public static class Global
+    {
+        public static List<OrderInformation> ordersList;
+        public static List<OrderInformation> confirmedList;
+        public static List<String> names;
+        public static StackPanel mainStackPanel;
+
+        public static Menu menu = new Menu();
+        public static Order order = new Order();
+        public static Assistance assistance = new Assistance();
+        public static Bill bill = new Bill();
+
+        public static void addToOrder(OrderInformation newOrder)
+        {
+            Global.ordersList.Add(newOrder);
+            Global.order.addToOrder(newOrder);
+        }
+    }
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        Menu menu = new Menu();
-        Order order = new Order();
-        Assistance assistance = new Assistance();
-        Bill bill = new Bill();
-        private List<OrderInfo> ordersList;
-
         public MainWindow()
         {
             InitializeComponent();
-            mainStackPanel.Children.Add(menu);
-            ordersList = new List<OrderInfo>();
+
+            Global.mainStackPanel = mainStackPanel;
+
+            //mainStackPanel.Children.Add(menu);
+            Global.ordersList = new List<OrderInformation>();
+            Global.confirmedList = new List<OrderInformation>();
+            Global.names = new List<String>();
 
             menuButton.Background = Brushes.LightGray;
             menuButton.FontWeight = FontWeights.Bold;
-        }
-
-        public void addToOrder(OrderInfo newOrder)
-        {
-            ordersList.Add(newOrder);
-            order.addToOrder(newOrder);
+            
+            menuButton.IsEnabled = false;
+            orderButton.IsEnabled = false;
+            assistanceButton.IsEnabled = false;
+            billButton.IsEnabled = false;
         }
 
         private void menuButton_Click(object sender, RoutedEventArgs e)
         {
             mainStackPanel.Children.Clear();
-            mainStackPanel.Children.Add(menu);
+            mainStackPanel.Children.Add(Global.menu);
 
             menuButton.Background = Brushes.LightGray;
             orderButton.Background = Brushes.White;
@@ -61,7 +78,7 @@ namespace horizontal
         private void orderButton_Click(object sender, RoutedEventArgs e)
         {
             mainStackPanel.Children.Clear();
-            mainStackPanel.Children.Add(order);
+            mainStackPanel.Children.Add(Global.order);
 
             menuButton.Background = Brushes.White;
             orderButton.Background = Brushes.LightGray;
@@ -77,7 +94,7 @@ namespace horizontal
         private void billButton_Click(object sender, RoutedEventArgs e)
         {
             mainStackPanel.Children.Clear();
-            mainStackPanel.Children.Add(bill);
+            mainStackPanel.Children.Add(Global.bill);
 
             menuButton.Background = Brushes.White;
             orderButton.Background = Brushes.White;
@@ -93,7 +110,7 @@ namespace horizontal
         private void assistanceButton_Click(object sender, RoutedEventArgs e)
         {
             mainStackPanel.Children.Clear();
-            mainStackPanel.Children.Add(assistance);
+            mainStackPanel.Children.Add(Global.assistance);
 
             menuButton.Background = Brushes.White;
             orderButton.Background = Brushes.White;
@@ -104,6 +121,33 @@ namespace horizontal
             orderButton.FontWeight = FontWeights.Regular;
             assistanceButton.FontWeight = FontWeights.Bold;
             billButton.FontWeight = FontWeights.Regular;
+        }
+
+        private void numPeopleSelected(object sender, SelectionChangedEventArgs e)
+        {
+            int numPeople = numPeopleSelector.SelectedIndex + 1;
+            peopleStackPanel.Children.Clear();
+            for (int i = 0; i < numPeople; i++)
+            {
+                NameEnter nameEnter = new NameEnter();
+                nameEnter.personNum.Content = "Person " + (i + 1);
+                nameEnter.personName.Text = "Person " + (i + 1);
+                peopleStackPanel.Children.Add(nameEnter);
+            }
+        }
+
+        private void confirmNumPeople_Click(object sender, RoutedEventArgs e)
+        {
+            introCanvas.Visibility = System.Windows.Visibility.Hidden;
+            foreach (NameEnter name in peopleStackPanel.Children)
+            {
+                Global.names.Add(name.personName.Text);
+            }
+            mainStackPanel.Children.Add(Global.menu);
+            menuButton.IsEnabled = true;
+            orderButton.IsEnabled = true;
+            assistanceButton.IsEnabled = true;
+            billButton.IsEnabled = true;
         }
     }
 }

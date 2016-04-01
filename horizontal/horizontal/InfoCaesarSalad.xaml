@@ -11,17 +11,17 @@
         <Label Content="$15.00" Canvas.Left="470" Canvas.Top="319" FontSize="24" FontWeight="Bold"/>
         <TextBlock Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="366" FontSize="18" FontWeight="Bold" Width="545"><Run Text="Crisp romaine and aged Parmesan cheese tossed in "/><Run Text="our "/><Run Text="own creamy dressing."/></TextBlock>
         <TextBlock Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="461" FontSize="16" Width="259"><Run Text="Health Information:  "/><LineBreak/><Run Text="• Does not contain nuts"/><LineBreak/><Run Text="• "/><Run Text="Contains lactose"/><LineBreak/><Run Text="• "/><Run Text="Gluten"/><Run Text="-free option available"/></TextBlock>
-        <Button x:Name ="returnButton" Content="Return to Menu" Canvas.Left="10" Canvas.Top="795" Width="259" Height="55" FontSize="18" Click="Button_Click"/>
+        <Button x:Name ="returnButton" Content="Return to Menu" Canvas.Left="10" Canvas.Top="743" Width="545" Height="88" FontSize="20" Click="Button_Click"/>
         <Rectangle Fill="#FFF4F4F5" Height="840" Canvas.Left="570" Stroke="Black" Canvas.Top="10" Width="399"/>
         <Label Content="Place your order:" Canvas.Left="570" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
         <Label Content="Add-ons:" Canvas.Left="570" Canvas.Top="52" FontSize="18" FontWeight="Bold"/>
-        <CheckBox Content="Add shrimp ($5.00)" Canvas.Left="595" Canvas.Top="86" FontSize="14"/>
-        <CheckBox Content="Add chicken ($5.00)" Canvas.Left="595" Canvas.Top="109" FontSize="14"/>
-        <CheckBox Content="Add salmon ($5.00)" Canvas.Left="597" Canvas.Top="132" FontSize="14"/>
+        <CheckBox x:Name="shrimpCB" Content="Add shrimp ($5.00)" Canvas.Left="595" Canvas.Top="86" FontSize="14"/>
+        <CheckBox x:Name="chickenCB" Content="Add chicken ($5.00)" Canvas.Left="595" Canvas.Top="109" FontSize="14"/>
+        <CheckBox x:Name="salmonCB" Content="Add salmon ($5.00)" Canvas.Left="595" Canvas.Top="132" FontSize="14"/>
         <Label Content="Special requests:" Canvas.Left="570" Canvas.Top="164" FontSize="18" FontWeight="Bold"/>
-        <CheckBox Content="Gluten-free" Canvas.Left="597" Canvas.Top="203" FontSize="14"/>
-        <CheckBox Content="Light dressing" Canvas.Left="595" Canvas.Top="226" FontSize="14"/>
-        <CheckBox Content="No cheese" Canvas.Left="597" Canvas.Top="249" FontSize="14"/>
+        <CheckBox x:Name="glutenCB" Content="Gluten-free" Canvas.Left="595" Canvas.Top="203" FontSize="14"/>
+        <CheckBox x:Name="dressingCB" Content="Light dressing" Canvas.Left="595" Canvas.Top="226" FontSize="14"/>
+        <CheckBox x:Name="cheeseCB" Content="No cheese" Canvas.Left="595" Canvas.Top="249" FontSize="14"/>
         <Label Content="Enter custom request:" Canvas.Left="570" Canvas.Top="281" FontSize="18" FontWeight="Bold"/>
         <TextBox Height="173" Canvas.Left="581" TextWrapping="Wrap" Text="" Canvas.Top="320" Width="373"/>
         <Label Content="Total, after add-ons: $15.00" Canvas.Left="581" Canvas.Top="704" FontSize="18" FontWeight="Bold"/>
@@ -36,5 +36,12 @@
                 <Button Content="OK" Grid.Row="2" Click="ButtonPopup_Click" Height="45" Width="322" Canvas.Left="10" Canvas.Top="537" RenderTransformOrigin="0.529,1.819"/>
             </Canvas>
         </Popup>
+        <Canvas x:Name="confrimCanvas" Height="350" Canvas.Left="570" Canvas.Top="354" Width="399" Background="White" Visibility="Hidden">
+            <Rectangle Fill="White" Height="350" Stroke="Black" Width="399"/>
+            <Label Content="Who is this item for?&#xA;(Select more than one person to share item)" Canvas.Left="10" Canvas.Top="10" FontSize="18"/>
+            <StackPanel x:Name="peopleStackPanel" Height="208" Canvas.Left="10" Canvas.Top="73" Width="379"/>
+            <Button x:Name="cancelButton" Content="Cancel" Canvas.Left="10" Canvas.Top="286" Width="150" Height="50" FontSize="20" Click="cancelButton_Click"/>
+            <Button x:Name="confirmButton" Content="Confrim" Canvas.Left="239" Canvas.Top="286" Width="150" Height="50" FontSize="20" Click="confirmButton_Click"/>
+        </Canvas>
     </Canvas>
 </UserControl>
