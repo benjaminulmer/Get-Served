@@ -25,6 +25,7 @@
             <TextBlock TextWrapping="Wrap" Text="Restaurant Custom Image/Logo/Advertisement/Promotion goes here" Margin="9" FontSize="14"/>
         </Border>
         <Canvas x:Name="introCanvas" Height="492" Canvas.Left="234" Canvas.Top="100" Width="882" Background="White">
+            <Rectangle Fill="White" Height="492" Stroke="Black" Width="882"/>
             <StackPanel x:Name="peopleStackPanel" Height="338" Canvas.Left="10" Canvas.Top="69" Width="862">
                 <StackPanel Height="100"/>
             </StackPanel>
