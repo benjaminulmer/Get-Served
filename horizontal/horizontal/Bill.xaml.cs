@@ -20,36 +20,23 @@ namespace horizontal
     /// </summary>
     public partial class Bill : UserControl
     {
-        List<BillItem> orders;
+        List<BillItem> billOrders;
         BillInfo combinedBill;
         bool isSplit;
-        List<String> profiles;
         List<BillInfo> profileBills;
 
         public Bill()
         {
             InitializeComponent();
 
-            profiles = new List<String>();
-            profiles.Add("Mia");
-            profiles.Add("Ryan");
-            profiles.Add("Leo");
-
-            orders = new List<BillItem>();
-            orders.Add(new BillItem("Roast Chicken", new List<String>() { "Mia", "Leo" }, 25.00F, "Subsititute sweet potato fries", 3.00F));
-            orders.Add(new BillItem("Steak", new List<String>() { "Ryan" }, 30.00F));
-            orders.Add(new BillItem("Dessert", new List<String>() { "Mia", "Ryan" }, 10.00F, "No whipped cream", 0.00F));
+            billOrders = new List<BillItem>();
 
             combinedBill = new BillInfo("combined");
-            foreach (BillItem item in orders)
-            {
-                combinedBill.addItem(item);
-            }
-            combinedBill.setPrice();
+
             billsPanel.Children.Add(combinedBill);
 
             profileBills = new List<BillInfo>();
-            foreach (String name in profiles)
+            foreach (String name in Global.names)
             {
                 profileBills.Add(new BillInfo(name));
             }
@@ -97,35 +84,42 @@ namespace horizontal
 
         private void splitBill() 
         {
-            for (int i = 0; i < profiles.Count; i++)
+            for (int i = 0; i < Global.names.Count; i++)
             {
-                String profile = profiles[i];
+                String profile = Global.names[i];
 
                 foreach (BillItem item in combinedBill.items) {
-                    if ((item.users.Count == 1) && (item.users[0] == profile)) {
-                        profileBills[i].addItem(new BillItem(item.item, new List<String>() {}, item.price, item.mods, item.modsPrice));
+                    if ((item.order.users.Count == 1) && (item.order.users[0] == profile)) {
+                        profileBills[i].addItem(item.order);
                     }
-                    else if (item.users[0] == profile)
+                    else if (item.order.users[0] == profile)
                     {
-                        splitWithMultiple(item);
+                        splitWithMultiple(item.order);
                     }
                     profileBills[i].setPrice();
-                    profileBills[i].setName(profiles[i]);
+                    profileBills[i].setName(Global.names[i]);
                 }
             }
         }
 
-        private void splitWithMultiple(BillItem item)
+        private void splitWithMultiple(OrderInformation item)
         {
             int numPeople = item.users.Count;
             String fractionString = "1/" + numPeople + " ";
-            String nameString = fractionString + item.item;
+            item.item = fractionString + item.item;
+
+            for (int i = 0; i < item.modsPrice.Count; i++ )
+            {
+                item.modsPrice[i] = (item.modsPrice[i] / numPeople);
+            }
+            
 
             foreach (BillInfo bill in profileBills)
             {
                 if (item.users.Contains(bill.user))
                 {
-                    bill.addItem(new BillItem(nameString, new List<String>() { }, (item.price / numPeople), item.mods, (item.modsPrice / numPeople)));
+                    item.users = new List<String>() { };
+                    bill.addItem(item);
                 }
             }
         }
@@ -136,9 +130,8 @@ namespace horizontal
             billsPanel.Children.Add(combinedBill);
         }
 
-        private void addItem(BillItem item)
+        public void addItem(OrderInformation item)
         {
-            orders.Add(item);
             combinedBill.addItem(item);
             combinedBill.setPrice();
 
@@ -146,7 +139,8 @@ namespace horizontal
             {
                 if ((item.users.Count == 1) && (bill.user == item.users[0]))
                 {
-                    bill.addItem(new BillItem(item.item, new List<String>() {}, item.price, item.mods, item.modsPrice));
+                    item.users = new List<String>() { };
+                    bill.addItem(item);
                     bill.setPrice();
                 }
                 else

@@ -20,67 +20,42 @@ namespace horizontal
     /// </summary>
     public partial class BillItem : UserControl
     {
-        public String item;
-        public List<String> users;
-        public float price;
-        public String mods;
-        public float modsPrice;
+        public OrderInformation order;
 
-        public BillItem(String item, List<String> users, float price)
+        public BillItem(OrderInformation newOrder)
         {
             InitializeComponent();
-            this.item = item;
-            this.users = users;
-            this.price = price;
-            this.mods = "No modifications";
-            this.modsPrice = 0.0F;
+
+            order = newOrder;
 
             String userLabelString;
-            if (users.Count == 0) { userLabelString = ""; }
+            if (order.users.Count == 0) { userLabelString = ""; }
             else { userLabelString = "For: "; }
             
-            for (int i = 0; i < users.Count; i++)
+            for (int i = 0; i < order.users.Count; i++)
             {
-                userLabelString = userLabelString + users[i];
-                if (i < users.Count - 1) { 
+                userLabelString = userLabelString + order.users[i];
+                if (i < order.users.Count - 1) { 
                     userLabelString = userLabelString + ", ";
                 }
             }
 
-            itemLabel.Content = item;
-            priceLabel.Content = "$" + price.ToString("0.00");
-            userLabel.Content = userLabelString;
-            modsLabel.Text = this.mods;
-            modsPriceLabel.Content = "$0.00";
-        }
+            String modText = "";
+            float modPriceTotal = 0.0F;
 
-        public BillItem(String item, List<String> users, float price, String mods, float modsPrice)
-        {
-            InitializeComponent();
-            this.item = item;
-            this.users = users;
-            this.price = price;
-            this.mods = mods;
-            this.modsPrice = modsPrice;
-
-            String userLabelString;
-            if (users.Count == 0) { userLabelString = ""; }
-            else { userLabelString = "For: "; }
-
-            for (int i = 0; i < users.Count; i++)
+            for (int i = 0; i < newOrder.mods.Count; i++ )
             {
-                userLabelString = userLabelString + users[i];
-                if (i < users.Count - 1)
-                {
-                    userLabelString = userLabelString + ", ";
-                }
+                modText = modText + newOrder.mods[i];
+                if (i < newOrder.mods.Count - 1) { modText = modText + ", ";  }
+
+                modPriceTotal = modPriceTotal + newOrder.modsPrice[i];
             }
 
-            itemLabel.Content = item;
-            priceLabel.Content = "$" + price.ToString("0.00");
+                itemLabel.Content = order.item;
+            priceLabel.Content = "$" + order.price.ToString("0.00");
             userLabel.Content = userLabelString;
-            modsLabel.Text = mods;
-            modsPriceLabel.Content = "$" + modsPrice.ToString("0.00");
+            modsLabel.Text = modText;
+            modsPriceLabel.Content = "$" + modPriceTotal.ToString("0.00");
         }
     }
 }
