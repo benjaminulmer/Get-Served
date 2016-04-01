@@ -39,14 +39,6 @@ namespace horizontal
 
         private void orderButton_Click(object sender, RoutedEventArgs e)
         {
-            //OrderInfo newOrder = new OrderInfo();
-            //newOrder.OrderName = "Sirloin Steak";
-            //newOrder.PriceValue = "$35.00";
-            
-            //(mainWindow as MainWindow).addToOrder(newOrder);
-
-            //(this.Parent as Panel).Children.Add(dinnerPage);
-            //(this.Parent as Panel).Children.Remove(this);
             confrimCanvas.Visibility = System.Windows.Visibility.Visible;
             peopleStackPanel.Children.Clear();
             foreach (String name in Global.names)
@@ -75,7 +67,7 @@ namespace horizontal
         private void confirmButton_Click(object sender, RoutedEventArgs e)
         {
             OrderInformation newOrder = new OrderInformation();
-            newOrder.item = "Sirloin Steak";
+            newOrder.item = "Top 10oz Sirloin Steak";
             newOrder.price = 35;
             if (shrimpCB.IsChecked == true)
             {
@@ -94,7 +86,7 @@ namespace horizontal
             }
             if (friesCB.IsChecked == true)
             {
-                newOrder.mods.Add("Sub bake potato for fries");
+                newOrder.mods.Add("Sub baked potato for fries");
                 newOrder.modsPrice.Add(0);
             }
             if (tomatoesCB.IsChecked == true)
@@ -114,8 +106,6 @@ namespace horizontal
                     newOrder.users.Add(name.nameCB.Content.ToString());
                 }
             }
-
-
             Global.addToOrder(newOrder);
 
             (this.Parent as Panel).Children.Add(dinnerPage);

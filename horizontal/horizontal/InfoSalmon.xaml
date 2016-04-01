@@ -11,18 +11,18 @@
         <Label Content="$25.00" Canvas.Left="470" Canvas.Top="319" FontSize="24" FontWeight="Bold"/>
         <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Served on rice and steamed asparagus." Canvas.Top="366" FontSize="18" FontWeight="Bold" Width="545"/>
         <TextBlock Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="461" FontSize="16" Width="259"><Run Text="Health Information:  "/><LineBreak/><Run Text="• "/><Run Text="C"/><Run Text="ontain"/><Run Text="s"/><Run Text=" nuts"/><LineBreak/><Run Text="• "/><Run Text="Contains lemons"/><LineBreak/><Run Text="• "/><Run Text="Gluten-free"/></TextBlock>
-        <Button x:Name ="returnButton" Content="Return to Menu" Canvas.Left="10" Canvas.Top="795" Width="259" Height="55" FontSize="18" Click="Button_Click"/>
+        <Button x:Name ="returnButton" Content="Return to Menu" Canvas.Left="10" Canvas.Top="743" Width="545" Height="88" FontSize="20" Click="Button_Click"/>
         <Rectangle Fill="#FFF4F4F5" Height="840" Canvas.Left="570" Stroke="Black" Canvas.Top="10" Width="399"/>
         <Label Content="Place your order:" Canvas.Left="570" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
-        <Label Content="Add-ons:" Canvas.Left="578" Canvas.Top="57" FontSize="18" FontWeight="Bold"/>
-        <CheckBox Content="Extra vegetables ($3.50)" Canvas.Left="595" Canvas.Top="96" FontSize="14"/>
-        <CheckBox Content="Substitute rice for a baked potato ($3.00)" Canvas.Left="595" Canvas.Top="119" FontSize="14"/>
-        <CheckBox Content="Add cajun sauce ($2.00)" Canvas.Left="595" Canvas.Top="142" FontSize="14"/>
+        <Label Content="Add-ons:" Canvas.Left="570" Canvas.Top="57" FontSize="18" FontWeight="Bold"/>
+        <CheckBox x:Name="vegiCB" Content="Extra vegetables ($3.50)" Canvas.Left="595" Canvas.Top="96" FontSize="14"/>
+        <CheckBox x:Name="potatoCB" Content="Substitute rice for a baked potato ($3.00)" Canvas.Left="595" Canvas.Top="119" FontSize="14"/>
+        <CheckBox x:Name="cSauceCB" Content="Add cajun sauce ($2.00)" Canvas.Left="595" Canvas.Top="142" FontSize="14"/>
         <Label Content="Special requests:" Canvas.Left="570" Canvas.Top="165" FontSize="18" FontWeight="Bold"/>
-        <CheckBox Content="Substitute asparagus for spinach" Canvas.Left="595" Canvas.Top="204" FontSize="14"/>
-        <CheckBox Content="No lemons" Canvas.Left="595" Canvas.Top="227" FontSize="14"/>
-        <CheckBox Content="Nut-free sauce" Canvas.Left="595" Canvas.Top="250" FontSize="14"/>
-        <Label Content="Enter custom request:" Canvas.Left="565" Canvas.Top="290" FontSize="18" FontWeight="Bold"/>
+        <CheckBox x:Name="spinachCB" Content="Substitute asparagus for spinach" Canvas.Left="595" Canvas.Top="204" FontSize="14"/>
+        <CheckBox x:Name="lemonCB" Content="No lemons" Canvas.Left="595" Canvas.Top="227" FontSize="14"/>
+        <CheckBox x:Name="nutCB" Content="Nut-free sauce" Canvas.Left="595" Canvas.Top="250" FontSize="14"/>
+        <Label Content="Enter custom request:" Canvas.Left="570" Canvas.Top="290" FontSize="18" FontWeight="Bold"/>
         <TextBox Height="173" Canvas.Left="581" TextWrapping="Wrap" Text="" Canvas.Top="324" Width="373"/>
         <Label Content="Total, after add-ons: $25.00" Canvas.Left="578" Canvas.Top="704" FontSize="18" FontWeight="Bold"/>
         <Button x:Name="orderButton" Content="ADD TO ORDER" Canvas.Left="581" Canvas.Top="743" Width="373" Height="88" FontSize="20" Background="#FFBDF4BB" Click="orderButton_Click"/>
@@ -36,5 +36,12 @@
                 <Button Content="OK" Grid.Row="2" Click="ButtonPopup_Click" Height="45" Width="322" Canvas.Left="10" Canvas.Top="537" RenderTransformOrigin="0.529,1.819"/>
             </Canvas>
         </Popup>
+        <Canvas x:Name="confrimCanvas" Height="350" Canvas.Left="570" Canvas.Top="354" Width="399" Background="White" Visibility="Hidden">
+            <Rectangle Fill="White" Height="350" Stroke="Black" Width="399"/>
+            <Label Content="Who is this item for?&#xA;(Select more than one person to share item)" Canvas.Left="10" Canvas.Top="10" FontSize="18"/>
+            <StackPanel x:Name="peopleStackPanel" Height="208" Canvas.Left="10" Canvas.Top="73" Width="379"/>
+            <Button x:Name="cancelButton" Content="Cancel" Canvas.Left="10" Canvas.Top="286" Width="150" Height="50" FontSize="20" Click="cancelButton_Click"/>
+            <Button x:Name="confirmButton" Content="Confrim" Canvas.Left="239" Canvas.Top="286" Width="150" Height="50" FontSize="20" Click="confirmButton_Click"/>
+        </Canvas>
     </Canvas>
 </UserControl>

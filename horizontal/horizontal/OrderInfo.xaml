@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" Width="1002" d:DesignHeight="84">
     <Grid x:Name="orderGrid" Background="White">
-        <Label x:Name="name" Content="Name" HorizontalAlignment="Left" Margin="54,18,0,0" VerticalAlignment="Top" FontSize="18" Width="156"/>
+        <Label x:Name="name" Content="Name" HorizontalAlignment="Left" Margin="54,18,0,0" VerticalAlignment="Top" FontSize="18" Width="290"/>
         <Label x:Name="price" Content="Price" HorizontalAlignment="Left" Margin="862,18,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Right" Width="85"/>
         <Image x:Name="xbutton" HorizontalAlignment="Left" Height="34" Margin="15,18,0,0" VerticalAlignment="Top" Width="34" Source="close icon.png" MouseDown="deleteClick"/>
         <Button x:Name="individualOrderButton" Content="Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Height="34" FontSize="18" Background="#FFBDF4BB" Canvas.Left="793" Canvas.Top="18" Margin="785,18,0,0"/>
         <Label x:Name="sentLabel" Content="SENT" HorizontalAlignment="Left" Margin="15,22,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
         <StackPanel x:Name="subNameStackPanel" HorizontalAlignment="Left" Margin="83,52,0,0" VerticalAlignment="Top" Width="177"/>
         <StackPanel x:Name="subPriceStackPanel" HorizontalAlignment="Left" Margin="862,57,0,0" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="forLabel" Content="For: " HorizontalAlignment="Left" Margin="215,18,0,0" VerticalAlignment="Top" Width="552" FontSize="18"/>
+        <Label x:Name="forLabel" Content="For: " HorizontalAlignment="Left" Margin="349,18,0,0" VerticalAlignment="Top" Width="552" FontSize="18"/>
     </Grid>
 </UserControl>
