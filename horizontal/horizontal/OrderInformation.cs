@@ -11,8 +11,8 @@ namespace horizontal
         private String _item;
         private List<String> _users;
         private float _price;
-        private String _mods;
-        private float _modsPrice;
+        private List<String> _mods;
+        private List<float> _modsPrice;
         private bool _isOrdered;
 
         public String item
@@ -33,13 +33,13 @@ namespace horizontal
             set { _price = value; }
         }
 
-        public String mods
+        public List<String> mods
         {
             get { return _mods; }
             set { _mods = value; }
         }
 
-        public float modsPrice
+        public List<float> modsPrice
         {
             get { return _modsPrice; }
             set { _modsPrice = value; }
