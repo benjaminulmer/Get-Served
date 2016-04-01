@@ -56,7 +56,6 @@ namespace horizontal
             menuButton.IsEnabled = false;
             orderButton.IsEnabled = false;
             assistanceButton.IsEnabled = false;
-            billButton.IsEnabled = false;
         }
 
         private void menuButton_Click(object sender, RoutedEventArgs e)
@@ -66,13 +65,11 @@ namespace horizontal
 
             menuButton.Background = Brushes.LightGray;
             orderButton.Background = Brushes.White;
-            billButton.Background = Brushes.White;
             assistanceButton.Background = Brushes.White;
 
             menuButton.FontWeight = FontWeights.Bold;
             orderButton.FontWeight = FontWeights.Regular;
             assistanceButton.FontWeight = FontWeights.Regular;
-            billButton.FontWeight = FontWeights.Regular;
         }
 
         private void orderButton_Click(object sender, RoutedEventArgs e)
@@ -82,13 +79,11 @@ namespace horizontal
 
             menuButton.Background = Brushes.White;
             orderButton.Background = Brushes.LightGray;
-            billButton.Background = Brushes.White;
             assistanceButton.Background = Brushes.White;
 
             menuButton.FontWeight = FontWeights.Regular;
             orderButton.FontWeight = FontWeights.Bold;
             assistanceButton.FontWeight = FontWeights.Regular;
-            billButton.FontWeight = FontWeights.Regular;
         }
 
         private void billButton_Click(object sender, RoutedEventArgs e)
@@ -98,13 +93,11 @@ namespace horizontal
 
             menuButton.Background = Brushes.White;
             orderButton.Background = Brushes.White;
-            billButton.Background = Brushes.LightGray;
             assistanceButton.Background = Brushes.White;
 
             menuButton.FontWeight = FontWeights.Regular;
             orderButton.FontWeight = FontWeights.Regular;
             assistanceButton.FontWeight = FontWeights.Regular;
-            billButton.FontWeight = FontWeights.Bold;
         }
 
         private void assistanceButton_Click(object sender, RoutedEventArgs e)
@@ -114,13 +107,11 @@ namespace horizontal
 
             menuButton.Background = Brushes.White;
             orderButton.Background = Brushes.White;
-            billButton.Background = Brushes.White;
             assistanceButton.Background = Brushes.LightGray;
 
             menuButton.FontWeight = FontWeights.Regular;
             orderButton.FontWeight = FontWeights.Regular;
             assistanceButton.FontWeight = FontWeights.Bold;
-            billButton.FontWeight = FontWeights.Regular;
         }
 
         private void numPeopleSelected(object sender, SelectionChangedEventArgs e)
@@ -147,7 +138,6 @@ namespace horizontal
             menuButton.IsEnabled = true;
             orderButton.IsEnabled = true;
             assistanceButton.IsEnabled = true;
-            billButton.IsEnabled = true;
 
             Global.bill.addUsers();
         }
