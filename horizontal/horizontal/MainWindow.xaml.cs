@@ -18,6 +18,7 @@ namespace horizontal
     public static class Global
     {
         public static List<OrderInformation> ordersList;
+        public static List<OrderInformation> confirmedList;
         public static List<String> names;
         public static StackPanel mainStackPanel;
 
@@ -46,6 +47,7 @@ namespace horizontal
 
             //mainStackPanel.Children.Add(menu);
             Global.ordersList = new List<OrderInformation>();
+            Global.confirmedList = new List<OrderInformation>();
             Global.names = new List<String>();
 
             menuButton.Background = Brushes.LightGray;

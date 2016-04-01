@@ -72,6 +72,11 @@ namespace horizontal
                 item.sentLabel.Visibility = Visibility.Visible;
                 item.individualOrderButton.Visibility = Visibility.Hidden;
             }
+            foreach (OrderInformation item in Global.ordersList)
+            {
+                Global.confirmedList.Add(item);
+            }
+            Global.ordersList.Clear();
             orderPending = false;
         }
 
