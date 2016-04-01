@@ -22,17 +22,26 @@ namespace horizontal
     {
         public static Boolean orderPending = true;
 
-        OrderDialog orderDialog;
-
         public Order()
         {
             InitializeComponent();
         }
 
-        public void addToOrder(OrderInfo newOrder)
+        public void addToOrder(OrderInformation newOrder)
         {
             orderPending = true;
-            orderStackPanel.Children.Add(newOrder);
+            OrderInfo orderInfo = new OrderInfo();
+            orderInfo.name.Content = newOrder.item;
+            orderInfo.price.Content = "$" + newOrder.price.ToString("0.00");
+            foreach (string desc in newOrder.mods)
+            {
+                Label label = new Label();
+                label.Content = desc;
+                orderInfo.subNameStackPanel.Children.Add(label);
+            }
+
+
+            orderStackPanel.Children.Add(orderInfo);
         }
 
         private void orderButton_Click(object sender, RoutedEventArgs e)
@@ -44,13 +53,8 @@ namespace horizontal
                 item.xbutton.Visibility = Visibility.Hidden;
                 item.sentLabel.Visibility = Visibility.Visible;
                 item.individualOrderButton.Visibility = Visibility.Hidden;
-                //item.name.Content = "SENT   " + item.name.Content;
-
-
             }
-            //orderStackPanel.Children.Clear();
             orderPending = false;
-
         }
 
         private void billOptionsButton_Click(object sender, RoutedEventArgs e)

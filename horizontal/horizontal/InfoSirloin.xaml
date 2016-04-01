@@ -21,13 +21,13 @@
         <RadioButton Content="Medium Well" Canvas.Left="595" Canvas.Top="163" FontSize="14" GroupName="steakGroup"/>
         <RadioButton Content="Well Done" Canvas.Left="595" Canvas.Top="186" FontSize="14" GroupName="steakGroup"/>
         <Label Content="Add-ons:" Canvas.Left="570" Canvas.Top="223" FontSize="18" FontWeight="Bold"/>
-        <CheckBox Content="Add shrimp ($5.00)" Canvas.Left="595" Canvas.Top="262" FontSize="14"/>
-        <CheckBox Content="Add peppercorn sauce ($4.00)" Canvas.Left="595" Canvas.Top="285" FontSize="14"/>
-        <CheckBox Content="Add cajun sauce ($2.00)" Canvas.Left="595" Canvas.Top="309" FontSize="14"/>
+        <CheckBox x:Name="shrimpCB" Content="Add shrimp ($5.00)" Canvas.Left="595" Canvas.Top="262" FontSize="14"/>
+        <CheckBox x:Name="pSauceCB" Content="Add peppercorn sauce ($4.00)" Canvas.Left="595" Canvas.Top="285" FontSize="14"/>
+        <CheckBox x:Name="cSauceCB" Content="Add cajun sauce ($2.00)" Canvas.Left="595" Canvas.Top="309" FontSize="14"/>
         <Label Content="Special requests:" Canvas.Left="570" Canvas.Top="362" FontSize="18" FontWeight="Bold"/>
-        <CheckBox Content="Substitute baked potato for french fries" Canvas.Left="595" Canvas.Top="400" FontSize="14"/>
-        <CheckBox Content="No tomatoes" Canvas.Left="595" Canvas.Top="423" FontSize="14"/>
-        <CheckBox Content="No mushrooms" Canvas.Left="595" Canvas.Top="446" FontSize="14"/>
+        <CheckBox x:Name="friesCB" Content="Substitute baked potato for french fries" Canvas.Left="595" Canvas.Top="400" FontSize="14"/>
+        <CheckBox x:Name="tomatoesCB" Content="No tomatoes" Canvas.Left="595" Canvas.Top="423" FontSize="14"/>
+        <CheckBox x:Name="mushroomsCB" Content="No mushrooms" Canvas.Left="595" Canvas.Top="446" FontSize="14"/>
         <Label Content="Enter custom request:" Canvas.Left="570" Canvas.Top="488" FontSize="18" FontWeight="Bold"/>
         <TextBox Height="173" Canvas.Left="581" TextWrapping="Wrap" Text="" Canvas.Top="527" Width="373"/>
         <Label Content="Total, after add-ons: $39.00" Canvas.Left="578" Canvas.Top="704" FontSize="18" FontWeight="Bold"/>

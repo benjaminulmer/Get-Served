@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace horizontal
 {
-    class OrderInformation
+    public class OrderInformation
     {
         private String _item;
         private List<String> _users;
@@ -14,6 +14,13 @@ namespace horizontal
         private List<String> _mods;
         private List<float> _modsPrice;
         private bool _isOrdered;
+
+        public OrderInformation()
+        {
+            _users = new List<String>();
+            _mods = new List<String>();
+            _modsPrice = new List<float>();
+        }
 
         public String item
         {

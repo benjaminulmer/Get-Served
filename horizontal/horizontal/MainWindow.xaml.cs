@@ -17,7 +17,7 @@ namespace horizontal
 {
     public static class Global
     {
-        public static List<OrderInfo> ordersList;
+        public static List<OrderInformation> ordersList;
         public static List<String> names;
         public static StackPanel mainStackPanel;
 
@@ -25,6 +25,12 @@ namespace horizontal
         public static Order order = new Order();
         public static Assistance assistance = new Assistance();
         public static Bill bill = new Bill();
+
+        public static void addToOrder(OrderInformation newOrder)
+        {
+            Global.ordersList.Add(newOrder);
+            Global.order.addToOrder(newOrder);
+        }
     }
 
     /// <summary>
@@ -39,7 +45,7 @@ namespace horizontal
             Global.mainStackPanel = mainStackPanel;
 
             //mainStackPanel.Children.Add(menu);
-            Global.ordersList = new List<OrderInfo>();
+            Global.ordersList = new List<OrderInformation>();
             Global.names = new List<String>();
 
             menuButton.Background = Brushes.LightGray;
@@ -49,12 +55,6 @@ namespace horizontal
             orderButton.IsEnabled = false;
             assistanceButton.IsEnabled = false;
             billButton.IsEnabled = false;
-        }
-
-        public void addToOrder(OrderInfo newOrder)
-        {
-            Global.ordersList.Add(newOrder);
-            Global.order.addToOrder(newOrder);
         }
 
         private void menuButton_Click(object sender, RoutedEventArgs e)

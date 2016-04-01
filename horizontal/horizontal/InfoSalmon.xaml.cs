@@ -36,17 +36,15 @@ namespace horizontal
 
         private void orderButton_Click(object sender, RoutedEventArgs e)
         {
-            var mainWindow = VisualTreeHelper.GetParent(this);
-            while (!(mainWindow is MainWindow)) { mainWindow = VisualTreeHelper.GetParent(mainWindow); }
+            OrderInformation newOrder = new OrderInformation();
+            newOrder.item = "Baked Salmon";
+            newOrder.price = 25;
 
-            OrderInfo newOrder = new OrderInfo();
-            newOrder.OrderName = "Baked Salmon";
-            newOrder.PriceValue = "$25.00";
+            Global.addToOrder(newOrder);
 
-            (mainWindow as MainWindow).addToOrder(newOrder);
-
-            (this.Parent as Panel).Children.Add(dinnerPage);
-            (this.Parent as Panel).Children.Remove(this);
+            Global.mainStackPanel.Children.Add(dinnerPage);
+            Global.mainStackPanel.Children.Remove(this);
+            //confrimCanvas.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void nutritionButton_Click(object sender, RoutedEventArgs e)

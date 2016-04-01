@@ -6,8 +6,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="1012" Height="594">
     <Canvas>
-        <ScrollViewer Height="416" Width="1002" Canvas.Top="99">
-            <StackPanel x:Name="orderStackPanel" Height="417" VerticalAlignment="Bottom"/>
+        <ScrollViewer Width="1002" Height="417" Canvas.Top="99">
+            <StackPanel x:Name="orderStackPanel" VerticalAlignment="Bottom"/>
         </ScrollViewer>
 
         <Label Content="Finalize Order" Canvas.Left="50" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
