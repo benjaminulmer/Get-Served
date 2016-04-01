@@ -107,6 +107,14 @@ namespace horizontal
                 newOrder.mods.Add("No mushrooms");
                 newOrder.modsPrice.Add(0);
             }
+            foreach (NameChoose name in peopleStackPanel.Children)
+            {
+                if (name.nameCB.IsChecked == true)
+                {
+                    newOrder.users.Add(name.nameCB.Content.ToString());
+                }
+            }
+
 
             Global.addToOrder(newOrder);
 

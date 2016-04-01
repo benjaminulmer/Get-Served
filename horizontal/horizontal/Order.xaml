@@ -6,12 +6,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="1012" Height="594">
     <Canvas>
-        <ScrollViewer Width="1002" Height="417" Canvas.Top="99">
-            <StackPanel x:Name="orderStackPanel" VerticalAlignment="Bottom"/>
+        <ScrollViewer Width="1002" Height="422" Canvas.Top="94">
+            <StackPanel x:Name="orderStackPanel"/>
         </ScrollViewer>
 
-        <Label Content="Finalize Order" Canvas.Left="50" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
-        <Label Content="Item" Canvas.Left="50" Canvas.Top="57" FontSize="20"/>
+        <Label Content="Finalize Order" Canvas.Left="10" Canvas.Top="10" FontSize="32" FontWeight="Bold"/>
+        <Label Content="Item" Canvas.Left="10" Canvas.Top="57" FontSize="20"/>
         <Label Content="Price" Canvas.Left="847" Canvas.Top="60" FontSize="20" Width="99" HorizontalContentAlignment="Right"/>
         <Label Content="Total: Some math $" Canvas.Left="742" Canvas.Top="526" FontSize="20" Width="204" HorizontalContentAlignment="Right"/>
         <Button x:Name="orderButton" Content="Send Pending Items" Canvas.Left="571" Canvas.Top="520" Width="195" Height="49" Background="#FFAFE4B1" FontSize="20" Click="orderButton_Click"/>

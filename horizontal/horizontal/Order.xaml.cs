@@ -33,13 +33,32 @@ namespace horizontal
             OrderInfo orderInfo = new OrderInfo();
             orderInfo.name.Content = newOrder.item;
             orderInfo.price.Content = "$" + newOrder.price.ToString("0.00");
-            foreach (string desc in newOrder.mods)
+            foreach (String desc in newOrder.mods)
             {
                 Label label = new Label();
                 label.Content = desc;
                 orderInfo.subNameStackPanel.Children.Add(label);
             }
-
+            foreach (float price in newOrder.modsPrice)
+            {
+                Label label = new Label();
+                label.Content = "$" + price.ToString("0.00");
+                label.HorizontalContentAlignment = System.Windows.HorizontalAlignment.Right;
+                orderInfo.subPriceStackPanel.Children.Add(label);
+            }
+            int count = 0;
+            foreach (String name in newOrder.users)
+            {
+                if (count == 0)
+                {
+                    orderInfo.forLabel.Content += name;
+                }
+                else
+                {
+                    orderInfo.forLabel.Content += (", " + name);
+                }
+                count++;
+            }
 
             orderStackPanel.Children.Add(orderInfo);
         }
@@ -48,7 +67,6 @@ namespace horizontal
         {
             foreach (OrderInfo item in orderStackPanel.Children)
             {
-
                 item.orderGrid.Background = Brushes.LightGray;
                 item.xbutton.Visibility = Visibility.Hidden;
                 item.sentLabel.Visibility = Visibility.Visible;
