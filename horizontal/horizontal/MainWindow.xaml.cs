@@ -43,12 +43,12 @@ namespace horizontal
         {
             InitializeComponent();
 
-            //Global.mainStackPanel = mainStackPanel;
+            Global.mainStackPanel = mainStackPanel;
 
             //mainStackPanel.Children.Add(menu);
             Global.ordersList = new List<OrderInformation>();
-            //Global.confirmedList = new List<OrderInformation>();
-            //Global.names = new List<String>();
+            Global.confirmedList = new List<OrderInformation>();
+            Global.names = new List<String>();
 
             menuButton.Background = Brushes.LightGray;
             menuButton.FontWeight = FontWeights.Bold;
@@ -57,9 +57,6 @@ namespace horizontal
             orderButton.IsEnabled = false;
             assistanceButton.IsEnabled = false;
             billButton.IsEnabled = false;
-
-            //Global.mainStackPanel = mainStackPanel;
-
         }
 
         private void menuButton_Click(object sender, RoutedEventArgs e)

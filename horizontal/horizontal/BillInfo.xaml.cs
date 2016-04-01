@@ -32,11 +32,10 @@ namespace horizontal
 
         }
 
-        public void addItem(OrderInformation item)
+        public void addItem(BillItem item)
         {
-            BillItem newItem = new BillItem(item);
-            billPanel.Children.Add(newItem);
-            this.items.Add(newItem);
+            billPanel.Children.Add(item);
+            this.items.Add(item);
         }
 
         public void removeItem(BillItem item)
@@ -56,11 +55,8 @@ namespace horizontal
 
             foreach (BillItem item in items)
             {
-                total = total + item.order.price;
-                foreach (float mod in item.order.modsPrice)
-                {
-                    total = total + mod;
-                }
+                total = total + item.price;
+                total = total + item.modsPrice;
             }
 
             String totalString = "$" + total.ToString("0.00");
