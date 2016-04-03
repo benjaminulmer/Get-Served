@@ -41,7 +41,7 @@ namespace horizontal
                 }
             }
 
-            String modText = "";
+            /*String modText = "";
             float modPrice = 0.0F;
 
             for (int i = 0; i < order.mods.Count; i++ )
@@ -50,13 +50,30 @@ namespace horizontal
                 if (i < order.mods.Count - 1) { modText = modText + ", "; }
 
                 modPrice = modPrice + order.modsPrice[i];
-            }
+            }*/
 
             itemLabel.Content = order.item;
             priceLabel.Content = "$" + order.price.ToString("0.00");
+            priceLabel.HorizontalContentAlignment = System.Windows.HorizontalAlignment.Right;
             userLabel.Content = userLabelString;
-            modsLabel.Text = modText;
-            modsPriceLabel.Content = "$" + modPrice.ToString("0.00");
+
+            foreach (String mod in order.mods)
+            {
+                Label label = new Label();
+                label.Content = mod;
+                modsPanel.Children.Add(label);
+            }
+            foreach (float price in order.modsPrice)
+            {
+                Label label = new Label();
+                label.Content = "$" + price.ToString("0.00");
+                label.HorizontalContentAlignment = System.Windows.HorizontalAlignment.Right;
+                modsPricePanel.Children.Add(label);
+            }
+
+            priceLabel.Content = "$" + order.price.ToString("0.00");
+            //modsLabel.Text = modText;
+            //modsPriceLabel.Content = "$" + modPrice.ToString("0.00");
         }
     }
 }

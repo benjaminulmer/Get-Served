@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="104" Width="259">
-    <Canvas Margin="0,0,0.2,0">
-        <Label x:Name="itemLabel" Content="Item" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Canvas.Left="10" Canvas.Top="4"/>
-        <Label x:Name="priceLabel" Content="$" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Canvas.Left="199" Canvas.Top="4"/>
-        <Label x:Name="userLabel" Content="User" Canvas.Left="27" Canvas.Top="28"/>
-        <Label x:Name="modsPriceLabel" Content="Mod $" Grid.Column="1" Canvas.Left="199" Canvas.Top="59"/>
-        <TextBlock x:Name ="modsLabel" TextWrapping="Wrap" Height="38" Grid.ColumnSpan="2" Canvas.Top="62" Canvas.Left="16" Width="183"><Run Text="Mods"/></TextBlock>
-    </Canvas>
+             mc:Ignorable="d" d:DesignHeight="72" Width="259">
+    <Grid>
+        <Label x:Name="itemLabel" Content="Item" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="239"/>
+        <Label x:Name="priceLabel" Content="$" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="192,0,0,0" Width="67"/>
+        <Label x:Name="userLabel" Content="User" Margin="24,29,58,19"/>
+        <StackPanel x:Name="modsPanel" HorizontalAlignment="Left" Margin="4,58,0,0" VerticalAlignment="Top" Width="197"/>
+        <StackPanel x:Name="modsPricePanel" HorizontalAlignment="Left" Margin="221,58,0,0" VerticalAlignment="Top" Width="38"/>
+    </Grid>
 </UserControl>
