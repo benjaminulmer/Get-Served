@@ -7,7 +7,7 @@
 
     <Canvas HorizontalAlignment="Left" Height="424" VerticalAlignment="Top" Width="302">
         <Rectangle Fill="White" Height="338" Stroke="Black" Width="282" Canvas.Left="10"/>
-        <Button x:Name="requestButton" Content="Request this Bill" Canvas.Top="343" Width="282" Height="71" Background="#FF99E19C" FontSize="20" Canvas.Left="10" Click="requestButton_Click"/>
+        <Button x:Name="requestButton" Content="Request this Bill" Canvas.Top="343" Width="282" Height="71" Background="#FFA8FFAF" FontSize="20" Canvas.Left="10" Click="requestButton_Click"/>
         <ScrollViewer Height="309" Canvas.Left="10" Width="282" Canvas.Top="29" BorderBrush="Black" BorderThickness="5">
             <StackPanel x:Name="billPanel"/>
         </ScrollViewer>

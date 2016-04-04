@@ -137,5 +137,11 @@ namespace horizontal
                 splitWithMultiple(new BillItem(item));
             }
         }
+
+        private void returnButton_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Add(Global.order);
+            (this.Parent as Panel).Children.Remove(this);
+        }
     }
 }

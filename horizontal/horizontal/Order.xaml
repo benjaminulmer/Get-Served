@@ -14,8 +14,8 @@
         <Label Content="Item" Canvas.Left="10" Canvas.Top="57" FontSize="20"/>
         <Label Content="Price" Canvas.Left="847" Canvas.Top="60" FontSize="20" Width="99" HorizontalContentAlignment="Right"/>
         <Label x:Name="totalLabel" Content="Total: $" Canvas.Left="742" Canvas.Top="526" FontSize="20" Width="204" HorizontalContentAlignment="Right"/>
-        <Button x:Name="orderButton" Content="Send Pending Items" Canvas.Left="571" Canvas.Top="520" Width="195" Height="49" Background="#FFAFE4B1" FontSize="20" Click="orderButton_Click"/>
-        <Button x:Name="finishDiningButton" Content="View Bill" Canvas.Left="318" Canvas.Top="520" Width="195" Height="49" Background="#FFAFE4B1" FontSize="20" Click="finishDiningButton_Click"/>
+        <Button x:Name="orderButton" Content="Send Pending Items" Canvas.Left="571" Canvas.Top="520" Width="195" Height="49" Background="#FFA8FFAF" FontSize="20" Click="orderButton_Click"/>
+        <Button x:Name="finishDiningButton" Content="View Bill" Canvas.Left="318" Canvas.Top="520" Width="195" Height="49" Background="#FFA8FFAF" FontSize="20" Click="finishDiningButton_Click"/>
         <Label x:Name ="billLabel" Content="(You cannot view the bill when you have pending items)" Canvas.Left="258" Canvas.Top="568" Width="313"/>
     </Canvas>
 </UserControl>
